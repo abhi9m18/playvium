@@ -134,8 +134,7 @@ export const useAuthStore = create<AuthStore>()(
       verifyResetOtp: async (data) => {
         set({ isLoading: true, error: null });
         try {
-          const result = await authApi.verifyOtp(data);
-          const { verified } = result;
+          const result = await authApi.verifyResetOtp(data);
           return { success: true, message: result.message };
         } catch (error: any) {
           const errorMessage =

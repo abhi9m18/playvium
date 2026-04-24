@@ -10,27 +10,11 @@ import PaymentDetails from "./buy-diamond/PaymentDetails";
 
 import { coingold, coingreen } from "@/assets/icons";
 import toast from "react-hot-toast";
-import { useAuthStore } from "@/store/auth-store";
+import { getActiveBundles, type ActiveBundle } from "@/lib/mock-site-data";
 
 type BuyDiamondProps = {
   header?: React.ReactNode;
 };
-
-export type ActiveBundle = {
-  id: string;
-  name: string;
-  description: string;
-  wulfCoinAmount: number;
-  bonusWulfCash: number;
-  price: number;
-  isActive: boolean;
-  displayOrder: number;
-  icon: string | null;
-  createdAt: string;
-  updatedAt: string;
-};
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function BuyDiamond({ header }: BuyDiamondProps) {
   const [tab, setTab] = useState<"cash" | "card">("cash");
@@ -42,7 +26,6 @@ export default function BuyDiamond({ header }: BuyDiamondProps) {
     free: string;
   }>(null);
 
-  const { token } = useAuthStore();
   const [bundles, setBundles] = useState<ActiveBundle[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -56,24 +39,7 @@ export default function BuyDiamond({ header }: BuyDiamondProps) {
     const fetchActiveBundles = async () => {
       try {
         setLoading(true);
-
-        if (!BASE_URL) throw new Error("NEXT_PUBLIC_API_URL missing in .env.local");
-
-        const res = await fetch(`${BASE_URL}/admin/coin-bundles/active`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            ...(token ? { Authorization: `Bearer ${token}` } : {}),
-          },
-          cache: "no-store",
-        });
-
-        if (!res.ok) {
-          const txt = await res.text();
-          throw new Error(txt || `Request failed: ${res.status}`);
-        }
-
-        const data: ActiveBundle[] = await res.json();
+        const data = await getActiveBundles();
         data.sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
         setBundles(data);
       } catch (e: any) {
@@ -85,7 +51,7 @@ export default function BuyDiamond({ header }: BuyDiamondProps) {
     };
 
     fetchActiveBundles();
-  }, [token]);
+  }, []);
 
   const firstBundle = useMemo(() => bundles?.[0] ?? null, [bundles]);
 

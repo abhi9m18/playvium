@@ -27,9 +27,8 @@ import LanguageModal from "../model/LanguageModal";
 import { useProfileMenu } from "@/context/ProfileMenuContext";
 import ProfileModal from "../model/profile/profile-modal";
 import { toast } from "react-hot-toast";
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 import { useAuthStore } from "@/store/auth-store";
+import { getWalletBalance } from "@/api/wallet/wallet.api";
 
 type WalletRightProps = {
   header?: React.ReactNode;
@@ -83,24 +82,12 @@ export default function Header({
 
   const fetchWalletBalance = async () => {
     try {
-      if (!token || !BASE_URL) return;
+      if (!token) return;
 
       setLoading(true);
-
-      const res = await fetch(`${BASE_URL}/wallet/balance`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        cache: "no-store",
-      });
-
-      if (!res.ok) throw new Error("Failed to fetch wallet");
-
-      const data: WalletBalanceResponse = await res.json();
+      const data: WalletBalanceResponse = await getWalletBalance();
       setWallet(data);
       setWalletError(null);
-
     }  catch (err: any) {
       setWalletError("Unable to load");
       toast.error(err?.message || "Unable to refresh wallet");

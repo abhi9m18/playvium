@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { ChevronLeft, ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { coingold, coingreen } from "@/assets/icons";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { useAuthStore } from "@/store/auth-store";
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+import { purchaseBundle } from "@/lib/mock-site-data";
 
 interface PaymentDetailsProps {
   bundleId: string;
@@ -24,113 +22,76 @@ export default function PaymentDetails({
   free,
   onCancel,
 }: PaymentDetailsProps) {
-  const { token, isAuthenticated } = useAuthStore();
   const [loading, setLoading] = useState(false);
 
-  const paymentMethod = "card_ending_1234";
-
   const handlePurchase = async () => {
-    if (loading) return; // ✅ prevent double click
+    if (loading) return;
 
     try {
-      if (!BASE_URL) throw new Error("NEXT_PUBLIC_API_URL is missing");
-      if (!token || isAuthenticated !== "authenticated") {
-        throw new Error("Unauthorized. Please login again.");
-      }
       if (!bundleId) throw new Error("BundleId missing");
 
       setLoading(true);
-
-      const res = await fetch(`${BASE_URL}/admin/coin-bundles/purchase`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ bundleId, paymentMethod }),
-      });
-
-      if (!res.ok) {
-        // ✅ try json error first, fallback text
-        let msg = "";
-        try {
-          const j = await res.json();
-          msg = j?.message || JSON.stringify(j);
-        } catch {
-          msg = await res.text();
-        }
-        throw new Error(msg || `Purchase failed: ${res.status}`);
-      }
-
-      toast.success("Payment successful ✅");
+      await purchaseBundle(bundleId);
+      toast.success("Payment successful");
       window.dispatchEvent(new Event("wallet-refresh"));
-      onCancel(); // ✅ go back
-    } catch (e: any) {
-      toast.error(e?.message || "Payment failed");
+      onCancel();
+    } catch (error: any) {
+      toast.error(error?.message || "Payment failed");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="w-full max-w-4xl -mt-6 mx-auto">
+    <div className="mx-auto -mt-6 w-full max-w-4xl">
       <button
         onClick={onCancel}
-        className="hidden md:flex items-center gap-1 text-gray-400 hover:text-white transition mb-3"
+        className="mb-3 hidden items-center gap-1 text-gray-400 transition hover:text-white md:flex"
       >
         <ChevronLeft size={18} />
         <span className="text-sm">Back</span>
       </button>
 
-      <p className="text-gray-400 text-sm md:text-base font-normal">
-        You will receive
-      </p>
+      <p className="text-sm font-normal text-gray-400 md:text-base">You will receive</p>
 
-      <div className="flex items-center gap-2 md:gap-2 mt-3 flex-nowrap overflow-x-auto no-scrollbar">
+      <div className="mt-3 flex flex-nowrap items-center gap-2 overflow-x-auto no-scrollbar md:gap-2">
         <Image src={coingold} alt="coin" width={22} height={22} />
-        <span className="text-white font-normal text-sm md:text-base">
+        <span className="text-sm font-normal text-white md:text-base">
           {amount.toLocaleString()}
         </span>
-
-        <span className="text-gray-400 text-sm md:text-base">
-          Free Wulf Coin
-        </span>
+        <span className="text-sm text-gray-400 md:text-base">Free Wulf Coin</span>
 
         <Image src={coingreen} alt="cash" width={20} height={20} />
-        <span className="text-white text-sm md:text-base">{free}</span>
-
-        <span className="text-gray-400 text-sm md:text-base">
-          Free Wulf Cash
-        </span>
+        <span className="text-sm text-white md:text-base">{free}</span>
+        <span className="text-sm text-gray-400 md:text-base">Free Wulf Cash</span>
       </div>
 
-      <p className="mt-2 text-gray-400 text-[13px] md:text-base leading-relaxed max-w-2xl">
-        Purchase Wulf Coin using your card. please keep in mind, you must redeem
-        any
+      <p className="mt-2 max-w-2xl text-[13px] leading-relaxed text-gray-400 md:text-base">
+        Purchase Wulf Coin using your card. please keep in mind, you must redeem any
         <br />
         win Cash using same payment method chosen.
       </p>
 
-      <div className="text-center my-10">
-        <h2 className="text-white text-xl font-bold">Order Summary</h2>
-        <p className="text-[#D96BFF] text-3xl font-bold mt-1">{price}</p>
-        <p className="text-gray-400 text-xs mt-1">
+      <div className="my-10 text-center">
+        <h2 className="text-xl font-bold text-white">Order Summary</h2>
+        <p className="mt-1 text-3xl font-bold text-[#D96BFF]">{price}</p>
+        <p className="mt-1 text-xs text-gray-400">
           {amount.toLocaleString()} Wulf Coin and bonus FREE {free}
         </p>
       </div>
 
       <div className="mb-6">
-        <p className="text-gray-400 text-xs mb-2">Your online banking</p>
-        <div className="bg-[#191D24] border border-gray-800 rounded-lg px-4 h-12 flex items-center justify-between">
-          <span className="text-gray-500 text-sm">Your online banking</span>
+        <p className="mb-2 text-xs text-gray-400">Your online banking</p>
+        <div className="flex h-12 items-center justify-between rounded-lg border border-gray-800 bg-[#191D24] px-4">
+          <span className="text-sm text-gray-500">Your online banking</span>
           <ChevronDown size={18} className="text-gray-500" />
         </div>
       </div>
 
       <div className="mb-10">
-        <p className="text-gray-400 text-xs mb-2">Other payment methods</p>
-        <div className="bg-[#191D24] border border-gray-800 rounded-lg px-4 h-12 flex items-center justify-between">
-          <span className="text-gray-500 text-sm"></span>
+        <p className="mb-2 text-xs text-gray-400">Other payment methods</p>
+        <div className="flex h-12 items-center justify-between rounded-lg border border-gray-800 bg-[#191D24] px-4">
+          <span className="text-sm text-gray-500"></span>
           <ChevronRight size={18} className="text-gray-500" />
         </div>
       </div>
@@ -139,14 +100,14 @@ export default function PaymentDetails({
         <button
           onClick={handlePurchase}
           disabled={loading}
-          className="w-85 h-9 bg-[#B93DEB] rounded-md text-white text-sm font-bold flex justify-center items-center mx-auto disabled:opacity-60"
+          className="mx-auto flex h-9 w-85 items-center justify-center rounded-md bg-[#B93DEB] text-sm font-bold text-white disabled:opacity-60"
         >
           {loading ? "Processing..." : "Proceed to payment"}
         </button>
 
         <button
           onClick={onCancel}
-          className="w-85 h-9 bg-[#2B2F36] rounded-md text-gray-300 text-sm font-bold flex justify-center items-center mx-auto"
+          className="mx-auto flex h-9 w-85 items-center justify-center rounded-md bg-[#2B2F36] text-sm font-bold text-gray-300"
         >
           Cancel payment
         </button>

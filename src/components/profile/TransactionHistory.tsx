@@ -91,6 +91,17 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
     }
   }, [token, isAuthenticated, fetchTransactions]);
 
+  useEffect(() => {
+    const handleWalletRefresh = () => {
+      if (token && isAuthenticated === "authenticated") {
+        fetchTransactions();
+      }
+    };
+
+    window.addEventListener("wallet-refresh", handleWalletRefresh);
+    return () => window.removeEventListener("wallet-refresh", handleWalletRefresh);
+  }, [token, isAuthenticated, fetchTransactions]);
+
   /* ============================
      CLIENT-SIDE FILTERING
   ============================ */

@@ -6,10 +6,11 @@ import {
   clearTokens,
 } from "@/lib/storage";
 
-console.log("API:", process.env.NEXT_PUBLIC_API_URL); 
+// Frontend-only mode - axios not required since we use dummy data
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  baseURL: API_URL,
   timeout: 12000,
   headers: {
     "Content-Type": "application/json",
@@ -43,7 +44,7 @@ api.interceptors.response.use(
       }
       try {
         const r = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_URL}/auth/refresh`,
+          `${API_URL}/auth/refresh`,
           { refreshToken }
         );
         const { accessToken, refreshToken: newRefresh } = r.data;
