@@ -185,7 +185,7 @@ export default function Header({
             onClick={() => {
               state.currentPage = "Home";
             }}
-            className="flex items-center"
+            className="flex ml-2 items-center"
           >
             <Image
               height={40}
