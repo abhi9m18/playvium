@@ -6,6 +6,7 @@ import NotificationModal from "@/components/model/NotificationModal";
 import { useSearchModal } from "@/context/SearchModalContext";
 import Image from "next/image";
 import {
+  logo,
   hamburgur,
   search2,
   globe,
@@ -157,15 +158,6 @@ export default function Header({
   const displayValue =
     activeCurrency === "cash" ? wulfCash.toFixed(2) : wulfCoin.toLocaleString();
 
-  const brandMark = (
-    <div className="flex items-baseline gap-1 text-white leading-none select-none">
-      <span className="text-[24px] italic font-light tracking-[-0.06em]">
-        Playvium
-      </span>
-      
-    </div>
-  );
-
   return (
     <div className="fixed w-full z-999 bg-[#0F131A]">
       {/* Desktop & Tablet Header */}
@@ -195,12 +187,13 @@ export default function Header({
             }}
             className="flex items-center"
           >
-            <div
-              aria-label="Playvium"
-              className="flex ml-4 h-10 min-w-[150px] items-center"
-            >
-              {brandMark}
-            </div>
+            <Image
+              height={40}
+              width={160}
+              src={logo}
+              alt="Logo"
+              className="w-36 h-10"
+            />
           </Link>
         </div>
 
@@ -427,19 +420,13 @@ export default function Header({
       <div className="flex md:hidden items-center justify-between w-full h-[62px] px-3 border-0 border-[#1f2937]">
         {/* Left side - Logo only */}
         <Link href="/" onClick={() => (state.currentPage = "Home")}>
-          <div
-            aria-label="Playvium"
-            className="flex h-9 min-w-[116px] items-center"
-          >
-            <div className="flex items-baseline gap-1 text-white leading-none select-none">
-              <span className="text-[24px] italic font-light tracking-[-0.06em]">
-                Play
-              </span>
-              <span className="text-[24px] italic font-light tracking-[-0.06em]">
-                vium
-              </span>
-            </div>
-          </div>
+          <Image
+            src={logo}
+            alt="Wolf Casino"
+            width={120}
+            height={32}
+            className="h-9 min-w-14 w-auto"
+          />
         </Link>
 
         {/* Right side */}
