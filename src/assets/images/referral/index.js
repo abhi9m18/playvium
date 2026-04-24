@@ -1,0 +1,21 @@
+import curreny from "./currency.svg";
+import rules from "./rules.svg";
+import referral from "./referral.svg";
+import download from "./download.svg";
+import dashboard from "./dashboard.svg";
+import group from "./group.svg";
+import badge from "./badge.svg";
+import mailbox from "./mailbox.svg";
+import SVG from "./SVG.svg";
+import Vector from "./Vector.svg";
+import facebook2 from "./facebook2.svg";
+import twitter2 from "./twitter2.svg";
+import linkedin from "./linkedin.svg";
+import telegram2 from "./telegram.svg";
+import whatsaap from "./whatsaap.svg";
+import line from "./line.svg";
+import uk from "./uk.svg";
+import skype2 from "./skype.svg";
+import social from "./social.svg";
+
+export { curreny, rules, dashboard, referral, download, badge, group, mailbox ,SVG ,Vector,facebook2, twitter2, linkedin, telegram2, whatsaap ,line ,uk, skype2 ,social };

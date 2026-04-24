@@ -1,0 +1,854 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer base {
+  @import 'react-phone-number-input/style.css';
+}
+
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, div {
+  font-family: 'Inter', sans-serif;
+}
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+
+@keyframes provider-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-provider-scroll {
+  animation: provider-scroll 25s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-provider-scroll {
+    animation-duration: 12s !important;
+  }
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+/* Hide scrollbar for Firefox */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #374151 transparent;
+}
+
+/* Smooth transitions for sidebar */
+.sidebar-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile bottom bar safe area */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-bottom-bar {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Backdrop blur effect */
+.backdrop-blur-custom {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Custom gradient for Casino button */
+.casino-gradient {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+}
+
+/* Icon glow effect on hover */
+.icon-glow:hover {
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5));
+  transition: filter 0.2s ease;
+}
+
+/* Custom scrollbar for sidebar */
+[data-sidebar="content"]::-webkit-scrollbar {
+  width: 4px;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 2px;
+}
+
+[data-sidebar="content"]::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Firefox scrollbar */
+[data-sidebar="content"] {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 transparent;
+}
+
+/* Smooth transitions */
+.sidebar-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Remove default sidebar shadows */
+[data-sidebar="sidebar"] {
+  box-shadow: none !important;
+}
+
+/* Custom group spacing when collapsed */
+[data-state="collapsed"] [data-sidebar="group"] {
+  margin-bottom: 0.5rem;
+}
+
+/* Icon-only mode styling */
+[data-state="collapsed"] [data-sidebar="menu-button"] {
+  padding: 0 !important;
+  justify-content: center !important;
+  background-color: #2d3748 !important;
+  border-radius: 0.75rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+[data-state="collapsed"] [data-sidebar="menu-button"]:hover {
+  background-color: #374151 !important;
+}
+
+/* Hide text when collapsed */
+[data-state="collapsed"] [data-sidebar="menu-button"] span {
+  display: none;
+}
+
+/* Center icons when collapsed */
+[data-state="collapsed"] [data-sidebar="menu-button"] > div {
+  justify-content: center;
+  width: 100%;
+}
+
+/* Mobile bottom bar safe area for iOS */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-bottom-bar {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 0.5rem);
+  }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Custom backdrop blur */
+.backdrop-blur-custom {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Gradient button fix */
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+/* Icon glow effect on hover */
+.icon-glow:hover {
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5));
+  transition: filter 0.2s ease;
+}
+
+/* Custom group content styling */
+[data-sidebar="group-content"] {
+  padding: 0;
+}
+
+/* Remove default gap from SidebarMenu */
+[data-sidebar="menu"] {
+  gap: 0 !important;
+}
+
+/* Sidebar container custom width */
+:root {
+  --sidebar-width: 16rem;
+  --sidebar-width-icon: 4.5rem;
+}
+
+/* Smooth width transition */
+[data-sidebar="sidebar"] {
+  transition: width 0.2s ease-in-out;
+}
+
+/* Mobile sidebar animation */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-sidebar-animate {
+  animation: slideInFromLeft 0.3s ease-out;
+}
+
+/* Custom button hover effects */
+button[data-sidebar="menu-button"]:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+button[data-sidebar="menu-button"]:hover {
+  /* transform: translateX(2px); */
+  background: #B93DEB;
+  transition: transform 0.2s ease;
+}
+
+/* Rounded corners for groups */
+[data-sidebar="group-content"] {
+  border-radius: 1rem;
+}
+
+/* Better text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible styles */
+button:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+/* Disable outline for mouse users */
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Apply globally */
+
+
+
+body {
+  background: #0F131A;
+}
+
+/* ========================================
+   HIDE ALL SCROLLBARS - CRITICAL
+   ======================================== */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Force hide on sidebar content */
+[data-sidebar="content"] {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll; /* Keep scroll functionality */
+}
+
+[data-sidebar="content"]::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Force hide on all scrollable elements */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* ========================================
+   SIDEBAR STYLING
+   ======================================== */
+
+/* Remove default sidebar border */
+[data-sidebar="sidebar"] {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Background colors - Perfect match */
+[data-sidebar="sidebar"] {
+  background-color: #0F131A !important;
+}
+
+[data-sidebar="content"] {
+  background-color: #0F131A !important;
+}
+
+/* Group container colors */
+[data-sidebar="group-content"] {
+  background-color: #1C2531 !important;
+}
+
+/* Icon mode - scrollable with hidden scrollbar */
+[data-state="collapsed"] [data-sidebar="content"] {
+  overflow-y: scroll !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  gap: 10px;
+}
+
+[data-state="collapsed"] [data-sidebar="content"]::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Icon mode - maintain proper layout */
+[data-state="collapsed"] [data-sidebar="group-content"] {
+  background-color: #1C2531 !important;
+  border-radius: 0.9rem !important;
+  height: auto !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem !important;
+}
+
+[data-state="collapsed"] [data-sidebar="menu"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+[data-state="collapsed"] [data-sidebar="menu-button"] {
+  width: 30px !important;
+  /* border: 1px solid #3e434b; */
+  height: 30px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem !important;
+  background-color: transparent !important;
+  transform: scale(1.4);
+}
+
+[data-state="collapsed"] [data-sidebar="menu-button"]:hover {
+  background-color: #B93DEB !important;
+  transform: scale(2);
+}
+
+[data-state="collapsed"] [data-sidebar="menu-button"][data-active="true"] {
+  background-color: #a855f7 !important;
+}
+
+/* Hide text in collapsed mode */
+[data-state="collapsed"] [data-sidebar="menu-button"] span {
+  display: none !important;
+}
+
+/* ========================================
+   MOBILE STYLING
+   ======================================== */
+
+/* Mobile sidebar - hidden scrollbar */
+.mobile-sidebar-scroll {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mobile-sidebar-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile bottom bar elevation shadow */
+.mobile-bottom-bar-shadow {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Center lobby button glow effect */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4),
+                0 0 40px rgba(168, 85, 247, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6),
+                0 0 60px rgba(168, 85, 247, 0.3);
+  }
+}
+
+.lobby-button-glow {
+  /* animation: pulse-glow 2s ease-in-out infinite; */
+}
+
+/* iOS safe area for bottom bar */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-bottom-bar {
+    padding-bottom: env(safe-area-inset-bottom);
+    height: calc(5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Prevent body scroll when menu open */
+body.mobile-menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* ========================================
+   ANIMATIONS & TRANSITIONS
+   ======================================== */
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, color, transform, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Button active state */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile menu slide animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.mobile-sidebar-enter {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+/* Backdrop animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.backdrop-enter {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* ========================================
+   BETTER RENDERING
+   ======================================== */
+
+/* Better font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ========================================
+   HOVER EFFECTS
+   ======================================== */
+
+/* Menu item hover effect */
+[data-sidebar="menu-button"]:hover {
+  /* transform: translateX(2px); */
+}
+
+[data-state="collapsed"] [data-sidebar="menu-button"]:hover {
+  transform: scale(1.5);
+}
+
+/* Active state glow */
+[data-sidebar="menu-button"][data-active="true"] {
+  box-shadow: 0 4px 12px rgba(255, 51, 0, 0.3);
+}
+
+/* Smooth icon transitions */
+[data-sidebar="menu-button"] img {
+  transition: transform 0.2s ease;
+}
+
+[data-sidebar="menu-button"]:hover img {
+  transform: scale(1.1);
+}
+
+/* ========================================
+   CUSTOM UTILITIES
+   ======================================== */
+
+/* Custom gradient for buttons */
+.gradient-purple {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+}
+
+/* Hover glow effect */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+/* Mobile sidebar backdrop blur */
+.mobile-sidebar-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Bottom bar icon active state */
+.bottom-bar-icon-active {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(240deg) brightness(100%) contrast(105%);
+}
+
+/* Remove all margins from groups */
+[data-sidebar="group"] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure proper spacing in collapsed mode */
+[data-state="collapsed"] [data-sidebar="group"] {
+  margin-bottom: 0.75rem;
+}
+
+[data-state="collapsed"] [data-sidebar="group"]:last-child {
+  margin-bottom: 0rem;
+}
+
+/* ========================================
+   PERFECT COLOR SCHEME
+   ======================================== */
+
+/* Main background */
+.bg-dark-primary {
+  background-color: #0F131A;
+}
+
+/* Group container */
+.bg-dark-secondary {
+  background-color: #1C2531;
+}
+
+/* Item background */
+.bg-dark-tertiary {
+  background-color: #2B3440;
+}
+
+/* Hover state */
+.bg-dark-hover {
+  background-color: #2d3e50;
+}
+
+/* Text colors */
+.text-gray-custom {
+  color: #8b92a8;
+}
+
+.text-purple-custom {
+  color: #a855f7;
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(100%); opacity: 0 }
+  to { transform: translateX(0); opacity: 1 }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.35s ease-out forwards;
+}
+
+.animate-slideRight {
+  animation: slideRight 0.35s ease-out forwards;
+}
+
+/* ===============================
+   CUSTOM PHONE INPUT LAYOUT
+================================ */
+
+.custom-phone {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+/* ===== LEFT BOX ===== */
+.custom-phone .PhoneInputCountry {
+  width: 75px;
+  height: 44px;
+  background: #1C222C;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding-left:10px;
+  padding-right:16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Make button flex */
+.custom-phone .PhoneInputCountrySelect {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 🔹 COUNTRY CODE — LEFT */
+.custom-phone .PhoneInputCountrySelect::before {
+  content: attr(data-country-code);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 🔹 FLAG — CENTER */
+.custom-phone .PhoneInputCountryIcon {
+  width: 28px;
+  height: 20px;
+  margin: 0;
+}
+
+/* 🔹 ARROW — RIGHT */
+.custom-phone .PhoneInputCountrySelectArrow {
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  font-weight: 800;
+  border-top-color: #ffffff;
+}
+
+/* Remove default select UI */
+.custom-phone .PhoneInputCountrySelect select {
+  appearance: none;
+}
+
+/* ===== RIGHT INPUT ===== */
+.custom-phone .PhoneInputInput {
+  flex: 1;
+  height: 44px;
+  background: #1C222C;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+/* Placeholder */
+.custom-phone .PhoneInputInput::placeholder {
+  color: #9fa6b6;
+}
+
+/* ===== DROPDOWN ===== */
+.PhoneInputCountrySelect option {
+  background: #1C222C;
+  color: #ffffff;
+}
+
+.PhoneInputCountrySelect option:hover {
+  background: #272d35;
+}
+
+/* Remove blur / white */
+.PhoneInput * {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
