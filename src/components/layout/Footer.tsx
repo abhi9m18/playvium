@@ -137,7 +137,7 @@ export default function Footer(props: FooterProps) {
           <div className="w-full flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 mb-8 md:mb-10">
             {/* LEFT SIDE */}
             <div className="flex flex-col gap-3 md:gap-4 max-w-full md:max-w-[600px] w-full">
-              <Link href={"/"} shallow={true} className="inline-block">
+              {/* <Link href={"/"} shallow={true} className="inline-block">
                 <Image
                   height={100}
                   width={100}
@@ -145,19 +145,19 @@ export default function Footer(props: FooterProps) {
                   alt="Wulf Casino Logo"
                   className="w-32 sm:w-36 md:w-40 lg:w-44 h-auto"
                 />
-              </Link>
+              </Link> */}
 
               {/* Desktop text */}
-              <p className="hidden md:block text-[13px] sm:text-[14px] md:text-[15px] leading-5 sm:leading-6 font-normal text-[#9fa6b6]">
+              {/* <p className="hidden md:block text-[13px] sm:text-[14px] md:text-[15px] leading-5 sm:leading-6 font-normal text-[#9fa6b6]">
                 Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 vulpu tate libero et velit interdum, ac aliquet odio mattis.
                 Class aptent taciti sociosqu ad litora torquent per conubia
                 nostra, per inceptos himenaeos. Curabitur tempus urna at turpis
                 condimentum lobortis.
-              </p>
+              </p> */}
 
               {/* Mobile short text */}
-              <p className="md:hidden text-[13.5px] leading-5 font-normal text-[#9fa6b6]">
+              {/* <p className="md:hidden text-[13.5px] leading-5 font-normal text-[#9fa6b6]">
                 Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 vulpu tate libero et velit interdum, ac aliquet odio mattis.
                 Class aptent taciti sociosqu ad litora torquent per conubia
@@ -168,22 +168,22 @@ export default function Footer(props: FooterProps) {
                 vulpu tate libero et velit interdum, ac aliquet odio mattis.
                 Class aptent taciti sociosqu ad litora torquent per conubia
                 nostra, per inceptos himenaeos.
-              </p>
+              </p> */}
 
               {/* Show more button - mobile only */}
-              <Link
+              {/* <Link
                 href="/about"
                 className="md:hidden inline-flex items-center gap-2 px-4 py-2 w-32 bg-[#384252] border border-[#5B6B86] text-white text-[14px] rounded-lg hover:bg-[#253041] transition"
               >
                 Show more
                 <span className="text-lg">›</span>
-              </Link>
+              </Link> */}
             </div>
 
             {/* RIGHT SIDE - LANGUAGE */}
             <div className="flex flex-row md:flex-col gap-10 md:gap-3 md:pr-5 items-center md:items-end  w-full">
 
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <Image
                   height={20}
                   width={20}
@@ -194,11 +194,10 @@ export default function Footer(props: FooterProps) {
                 <span className="text-[18px] md:text-[16px] leading-8 text-white font-medium">
                   Language
                 </span>
-              </div>
+              </div> */}
 
               <div ref={ref} className="relative w-full md:w-[150px] select-none">
-                {/* SELECT BUTTON */}
-                <button
+                {/* <button
                   type="button"
                   onClick={() => setOpen((p) => !p)}
                   className="w-full bg-[#242B35] md:bg-[#15181E] text-white px-3 py-3 md:py-2.5 pr-10
@@ -209,10 +208,10 @@ export default function Footer(props: FooterProps) {
                 >
                   <span className="text-[15px] md:text-[16px]">
                     {selected.label}
-                  </span>
+                  </span> */}
 
                   {/* ARROW */}
-                  <span
+                  {/* <span
                     className={`absolute right-3 top-1/2 -translate-y-1/2
                                   transition-transform duration-200
                                   ${open ? "rotate-180" : ""}`}
@@ -224,7 +223,7 @@ export default function Footer(props: FooterProps) {
                       height={12}
                     />
                   </span>
-                </button>
+                </button> */}
 
                 {/* DROPDOWN */}
                 {open && (
@@ -360,7 +359,7 @@ export default function Footer(props: FooterProps) {
             {/* Wulf Casino */}
             <div className="flex flex-col gap-2.5">
               <h3 className="text-[15px] md:text-[16px] text-white font-medium mb-1">
-                Wulf Casino
+                Playvium
               </h3>
               <Link
                 href="#"
