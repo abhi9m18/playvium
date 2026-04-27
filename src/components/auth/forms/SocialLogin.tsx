@@ -16,9 +16,15 @@ export default function SocialLogin() {
 
   useEffect(() => {
     if (!window.google) return;
+    
+    // Skip Google auth initialization if client_id is not set
+    if (!process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID) {
+      console.warn("Google Client ID not configured");
+      return;
+    }
 
     clientRef.current = window.google.accounts.oauth2.initCodeClient({
-      client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!,
+      client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       scope: "openid email profile",
       ux_mode: "popup", // OPEN GOOGLE POPUP WINDOW
       callback: async (response: any) => {

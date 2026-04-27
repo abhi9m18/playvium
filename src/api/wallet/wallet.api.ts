@@ -1,22 +1,21 @@
-import api from "../config/axios.config";
 import type {
   WalletBalanceResponse,
   WalletTransactionResponse,
 } from "./wallet.types";
+import {
+  getWalletBalanceData,
+  getWalletTransactionsData,
+} from "@/lib/mock-site-data";
 
-// GET WALLET BALANCE
+// GET WALLET BALANCE - DUMMY
 export const getWalletBalance = async (): Promise<WalletBalanceResponse> => {
-  const res = await api.get<WalletBalanceResponse>("/wallet/balance");
-  return res.data;
+  return getWalletBalanceData();
 };
 
-// GET WALLET TRANSACTIONS
+// GET WALLET TRANSACTIONS - DUMMY
 export const getWalletTransactions = async (
   page: number = 1,
   limit: number = 10
 ): Promise<WalletTransactionResponse> => {
-  const res = await api.get<WalletTransactionResponse>(
-    `/wallet/transactions?page=${page}&limit=${limit}`
-  );
-  return res.data;
+  return getWalletTransactionsData(page, limit);
 };

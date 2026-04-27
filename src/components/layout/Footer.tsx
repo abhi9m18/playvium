@@ -130,7 +130,7 @@ export default function Footer(props: FooterProps) {
         `}
       </style>
 
-      <div className="flex flex-col mt-0 items-center w-full bg-[#191A1A] md:bg-[#191D24] text-[#B3BEC1] font-[Inter]">
+      <div className="flex flex-col mt-0 items-center w-full bg-[#06162D] text-[#B3BEC1] font-[Inter]">
         {/* Container with max-width and padding */}
         <div className="w-full max-w-[1200px] px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-10">
           {/* Top Section - Logo and Language */}
@@ -201,7 +201,7 @@ export default function Footer(props: FooterProps) {
                 <button
                   type="button"
                   onClick={() => setOpen((p) => !p)}
-                  className="w-full bg-[#242B35] md:bg-[#15181E] text-white px-3 py-3 md:py-2.5 pr-10
+                  className="w-full bg-[#0C2851] text-white px-3 py-3 md:py-2.5 pr-10
                               rounded-md border border-[#2a2e38]
                               hover:border-[#3a3e48]
                               flex items-center justify-between
@@ -504,7 +504,7 @@ export default function Footer(props: FooterProps) {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9  flex items-center justify-center rounded-lg bg-[#14161b] hover:bg-[#3a3e48] transition-colors"
+                    className="w-9 h-9  flex items-center justify-center rounded-lg bg-[#0C2851] hover:bg-[#3a3e48] transition-colors"
                   >
                     {/* NORMALIZED ICON WRAPPER */}
                     <div

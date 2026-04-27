@@ -29,7 +29,7 @@ export default function LatestBetAndRace() {
           Latest Bet and Race
         </h2>
 
-        <div className="flex items-center bg-[#101418] border border-white/5 rounded-xl overflow-hidden w-full sm:w-auto">
+        <div className="flex items-center bg-[#0C2851] border border-white/5 rounded-xl overflow-hidden w-full sm:w-auto">
           <button
             onClick={() => setActiveTab("high")}
             className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm transition ${
@@ -55,7 +55,7 @@ export default function LatestBetAndRace() {
       </div>
 
       {/* DESKTOP TABLE VIEW */}
-      <div className="hidden md:block w-full bg-[#111418] border border-white/5 rounded-2xl p-4 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      <div className="hidden md:block w-full bg-[#06162D] border border-white/5 rounded-2xl p-4 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         <table className="w-full min-w-[700px] text-left">
           <thead>
             <tr className="text-white text-[15px]">

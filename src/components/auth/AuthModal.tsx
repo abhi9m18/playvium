@@ -1,5 +1,5 @@
 "use client";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useAuthModal } from "@/store/auth-modal-store";
 import LoginForm from "./forms/LoginForm";
 import RegisterForm from "./forms/RegisterForm";
@@ -80,6 +80,7 @@ export default function AuthModal() {
         "
         aria-describedby={undefined}
       >
+        <DialogTitle className="sr-only">{AUTH_TEXT[view].title}</DialogTitle>
         <div
           ref={scrollContainerRef}
           className="flex flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden"

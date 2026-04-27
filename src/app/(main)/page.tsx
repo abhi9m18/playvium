@@ -15,7 +15,7 @@ export default function HomePage() {
   const { profileOpen, setProfile } = useProfileMenu();
 
   return (
-    <div className="flex flex-col max-w-7xl mx-auto pb-6">
+    <div className="flex flex-col max-w-7xl mx-auto pb-6 bg-[#060B1E]">
       {profileOpen && (
         <ProfileModal onClose={() => setProfile(false)} />
       )}

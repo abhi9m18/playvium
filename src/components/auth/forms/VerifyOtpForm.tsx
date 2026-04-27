@@ -64,7 +64,8 @@ export default function VerifyOtpForm() {
           : await verifyResetOtp({ entity, otp })
 
       // Determine success field
-      const isVerified = result?.verified || result?.success;
+      const isVerified =
+        "verified" in result ? result.verified : result.success;
 
       if (!isVerified) {
         throw new Error(result?.message || "Invalid OTP");
