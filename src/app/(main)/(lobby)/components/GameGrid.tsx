@@ -117,7 +117,7 @@ export default function GameBrowser({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="w-full bg-[#14171D] text-white px-12 py-3 rounded-xl border border-[#20242C] 
-                focus:ring-2 focus:ring-[#B93DEB] outline-none transition placeholder:text-white/40"
+                focus:ring-2 focus:ring-[#187BF0] outline-none transition placeholder:text-white/40"
         />
       </div>
       <CategoryTabs />
@@ -346,7 +346,7 @@ export default function GameBrowser({
             <div className="w-full flex justify-center pt-6 pb-2">
               <button
                 onClick={() => setShowAll(true)}
-                className="px-8 py-3 bg-[#384252] hover:bg-[#A02DD6] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+                className="px-8 py-3 bg-[#187BF0] hover:bg-[#187BF0] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 View All
               </button>
@@ -370,11 +370,11 @@ export default function GameBrowser({
       {!isLoading && filteredAndSorted.length === 0 && (
         <div className="w-full flex flex-col items-center justify-center py-12 bg-[#171b22] rounded-xl">
           <div className="relative mb-4">
-            <div className="absolute inset-0 rounded-full blur-xl bg-[#B93DEB]/20" />
+            <div className="absolute inset-0 rounded-full blur-xl bg-[#187BF0]/20" />
             <div className="relative w-16 h-16 flex items-center justify-center bg-[#2B3140] rounded-full shadow-[0_0_18px_rgba(185,61,235,0.35)]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8 text-[#B93DEB]"
+                className="w-8 h-8 text-[#187BF0]"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
