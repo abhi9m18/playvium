@@ -117,7 +117,7 @@ export default function Statistics({ onBack, onClose }: StatisticsProps) {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full overflow-hidden ring-1 ring-accent">
               <img
-                src="/profiles/cyberpunk-demon-mask-red-purple.jpg"
+                // src="/profiles/cyberpunk-demon-mask-red-purple.jpg"
                 alt="avatar"
                 className="w-full h-full object-cover"
               />

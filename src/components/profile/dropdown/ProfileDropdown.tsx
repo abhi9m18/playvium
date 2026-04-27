@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react"
 import ProfileMenu from "./ProfileMenu"
 import Image from "next/image"
 import { menubb } from "@/assets/icons/bottombar"
-import { dino } from "@/assets/images/home"
+import { mennew } from "@/assets/images/home"
 
 interface Props {
   menuType: string
@@ -24,7 +24,7 @@ export default function ProfileDropdown({ menuType, openLanguageModal }: Props) 
       >
         {menuType === 'top' ? (
           <div className="w-10 h-10 rounded-full bg-[#6A16D1] overflow-hidden flex items-center justify-center">
-            <Image src={dino} alt="User Avatar" width={40} height={40} />
+            <Image src={mennew} alt="User Avatar" width={40} height={40} />
           </div>
         ) : (
           <button className="flex flex-col items-center justify-center gap-1 text-[#ffffff] hover:text-white">
