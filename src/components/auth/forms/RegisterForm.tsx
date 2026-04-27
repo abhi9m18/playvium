@@ -172,11 +172,10 @@ export default function RegisterForm() {
           <Checkbox
             checked={watch("agreeTerms")}
             onCheckedChange={(v) => setValue("agreeTerms", v === true)}
-            className="rounded-[3px] data-[state=checked]:bg-[#187BF0] data-[state=checked]:border-[#187BF0]"
+            className="rounded-[3px] data-[state=checked]:bg-[#187BF0] data-[state=checked]:border-[#187BF0] mt-0.5 shrink-0"
             disabled={isLoading}
-          >
-            I agree to the User Agreement & confirm I am at least 18 years old.
-          </Checkbox>
+          />
+          <span>I agree to the User Agreement & confirm I am at least 18 years old.</span>
         </label>
 
         {errors.agreeTerms && (
@@ -187,7 +186,7 @@ export default function RegisterForm() {
           <Checkbox
             checked={watch("agreePromo")}
             onCheckedChange={(v) => setValue("agreePromo", v === true)}
-            className="rounded-[3px] data-[state=checked]:bg-[#187BF0] data-[state=checked]:border-[#187BF0]"
+            className="rounded-[3px] data-[state=checked]:bg-[#187BF0] data-[state=checked]:border-[#187BF0] mt-0.5 shrink-0"
             disabled={isLoading}
           />
           <span>I agree to receive marketing promotions.</span>
