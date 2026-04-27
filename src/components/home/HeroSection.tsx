@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  slot,
+  slotimg,
+  pokerimg,livedealer,fishingimg,
   herocasino,
   herosports,
   herodragon,
@@ -89,18 +92,21 @@ export default function HeroSection() {
   return (
     <div className="w-full md:px-0">
       {/* Main Hero Banner */}
-      <div className="relative w-full h-60 sm:h-[420px] md:h-[300px] lg:h-80 overflow-hidden">
+      <div className="relative w-full h-60 sm:h-[420px] md:h-[300px] lg:h-80 overflow-hidden bg-[#191d24]">
         {/* Purple Gradient Overlay */}
-        <div className="absolute inset-0 w-full md:w-3/4 bg-linear-to-b from-[#191d24] to-transparent z-1"></div>
+
+
+
+        <div className="absolute inset-0 w-full md:w-3/4" style={{ background: "linear-gradient(180deg, #153C6E 0%, rgba(21, 60, 110, 0.00) 100%)" }}></div>
 
         {/* Hero Dragon Image - Center */}
-        <div className="hidden absolute inset-0 md:flex items-center justify-center z-5 pointer-events-none">
+        {/* <div className="hidden absolute inset-0 md:flex items-center justify-center z-5 pointer-events-none">
           <Image
             src={herodragon}
             alt="Hero Dragon"
             className="h-[55%] w-auto sm:h-[50%] object-contain"
           />
-        </div>
+        </div> */}
 
         {/* Content Container */}
         <div className="relative z-10 h-full flex items-center">
@@ -149,7 +155,7 @@ export default function HeroSection() {
                     <div className="flex flex-col sm:flex-row md:items-baseline gap-0 sm:gap-2 mt-1">
                       {/* AMOUNT */}
                       {banner.amount && (
-                        <span className="text-[#CA6BEF] font-medium md:font-semibold text-[20px] sm:text-[30px] leading-none">
+                        <span className="font-medium md:font-semibold text-[20px] sm:text-[30px] leading-none" style={{ background: "linear-gradient(90deg, #0D6BEF 0%, #6FFCF7 123.17%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                           {banner.amount}
                         </span>
                       )}
@@ -166,7 +172,8 @@ export default function HeroSection() {
                   {/* CTA BUTTON */}
                   <button
                     onClick={() => handleBannerAction(banner)}
-                    className="w-[130px] sm:w-[180px] h-[45px] sm:h-[55px] border-2 md:border border-white/40 rounded-xl bg-[#B93DEB] md:bg-[#212730] text-white text-[16px] sm:text-[18px] flex items-center justify-center md:mt-5 shadow-[0_0_20px_rgba(31,37,46,0.4)] transition-transform hover:scale-[1.03] active:scale-95"
+                    className="w-[130px] sm:w-[180px] h-[45px] sm:h-[55px] border-2 md:border border-white/40 rounded-xl text-white text-[16px] sm:text-[18px] flex items-center justify-center md:mt-5 shadow-[0_0_20px_rgba(31,37,46,0.4)] transition-transform hover:scale-[1.03] active:scale-95"
+                    style={{ background: "linear-gradient(90deg, #0D6BEF 0%, #6FFCF7 123.17%)" }}
                   >
                     {banner.buttonText}
                   </button>
@@ -183,9 +190,10 @@ export default function HeroSection() {
                 onClick={() => goToSlide(index)}
                 className={`rounded-full transition-all ${
                   index === currentSlide
-                    ? "w-10 h-2 bg-[#b13fdf]"
+                    ? "w-10 h-2"
                     : "w-2 h-2 bg-white/40"
                 }`}
+                style={index === currentSlide ? { background: "linear-gradient(90deg, #0D6BEF 0%, #6FFCF7 123.17%)" } : undefined}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
@@ -233,7 +241,7 @@ export default function HeroSection() {
                transition-transform duration-300 hover:scale-[1.04]"
         >
           <Image
-            src={slotherobanner}
+            src={slotimg}
             alt="Slot"
             className="w-full h-[100px] md:h-40 object-cover md:object-fill"
             priority
@@ -246,7 +254,7 @@ export default function HeroSection() {
                transition-transform duration-300 hover:scale-[1.04]"
         >
           <Image
-            src={pokerherobanner}
+            src={pokerimg}
             alt="Poker"
             className="w-full h-[100px] md:h-40 object-cover md:object-fill"
             priority
@@ -259,7 +267,7 @@ export default function HeroSection() {
                transition-transform duration-300 hover:scale-[1.04]"
         >
           <Image
-            src={liveherobanner}
+            src={livedealer}
             alt="Live Dealer"
             className="w-full h-[100px] md:h-40 object-cover md:object-fill"
             priority
@@ -272,7 +280,7 @@ export default function HeroSection() {
                transition-transform duration-300 hover:scale-[1.04]"
         >
           <Image
-            src={fishingherobanner}
+            src={fishingimg}
             alt="Fishing"
             className="w-full h-[100px] md:h-40 object-cover md:object-fill"
             priority

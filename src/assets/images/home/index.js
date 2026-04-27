@@ -13,7 +13,13 @@ import logo from "./logo.svg";
 import logo2 from "./logo2.svg";
 import globe from "./globle.svg"; 
 import gold from "./gold.svg";
+import slotimg from "./slotimg.svg";
+import pokerimg from "./pokerimg.svg";
+import livedealer from "./livedealer.svg";
+import fishingimg from "./fishingimg.svg";
 
+
+// new playvium home banner images
 import blurhomebanner from "./blurhomebanner.png";
 import blurhomebanner2 from "./blurhomebanner2.png";
 import blurhomebanner3 from "./blurhomebanner3.png";
@@ -32,8 +38,7 @@ import herosports from "./herosports.svg";
 import herosportsmobile from "./herosportsmobile.svg";
 import herodragon from "./herodragon.svg";
 import badgegold from "./badgegold.svg";
-
-
+import slot from "./slot.svg";
 import slotherobanner from "./slotherobanner.svg";
 import pokerherobanner from "./pokerherobanner.svg";
 import liveherobanner from "./liveherobanner.svg";
@@ -42,6 +47,8 @@ import fishingherobanner from "./fishingherobanner.svg";
 
 
 export {
+  slot,
+  slotimg,pokerimg,livedealer,fishingimg,
   fishingherobanner,
   liveherobanner,
   pokerherobanner,

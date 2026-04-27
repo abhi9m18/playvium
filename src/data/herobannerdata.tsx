@@ -44,7 +44,7 @@ export const banners = [
     amount: "",
     amountSuffix: "Get Cash Instantly",
     buttonText: "Invite Friend",
-    backgroundImage: blurhomebanner2,
+    backgroundImage: homebannerone,
 
     link: "/referral",
 
@@ -63,7 +63,7 @@ export const banners = [
     amount: "50,000.00",
     amountSuffix: "Wulf Cash",
     buttonText: "Download",
-    backgroundImage: blurhomebanner3,
+    backgroundImage: homebannerone,
 
     link: "/download",
 
