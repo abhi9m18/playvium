@@ -7,7 +7,7 @@ import {
   slot,
   slotimg,
   pokerimg,livedealer,fishingimg,
-  herocasino,casinobanner,
+  herocasino, casinonebanner, slotnew, pokernew, livedealernew, fishingnew,
   herosports,
   herodragon,
   herosportsmobile,
@@ -15,6 +15,7 @@ import {
   pokerherobanner,
   liveherobanner,
   fishingherobanner,
+  sportbooknew,
 } from "@/assets/images/home";
 import { banners } from "@/data/herobannerdata";
 import { useRouter } from "next/navigation";
@@ -193,7 +194,7 @@ export default function HeroSection() {
         >
           <div className="relative w-full h-[120px] md:h-auto aspect-[2.2/1] md:aspect-[2.2/1]">
             <Image
-              src={casinobanner}
+              src={casinonebanner}
               alt="Casino"
               fill
               className="object-cover md:object-fill"
@@ -209,7 +210,7 @@ export default function HeroSection() {
         >
           <div className="relative w-full h-[125px] md:h-auto aspect-[2.2/1] md:aspect-[2.2/1]">
             <Image
-              src={herosportsmobile}
+              src={sportbooknew}
               alt="Sportsbook"
               fill
               className="object-cover md:object-fill"
@@ -226,7 +227,7 @@ export default function HeroSection() {
                transition-transform duration-300 hover:scale-[1.04]"
         >
           <Image
-            src={slotimg}
+            src={slotnew}
             alt="Slot"
             className="w-full h-[100px] md:h-40 object-cover md:object-fill"
             priority
@@ -239,7 +240,7 @@ export default function HeroSection() {
                transition-transform duration-300 hover:scale-[1.04]"
         >
           <Image
-            src={pokerimg}
+            src={pokernew}
             alt="Poker"
             className="w-full h-[100px] md:h-40 object-cover md:object-fill"
             priority
@@ -252,7 +253,7 @@ export default function HeroSection() {
                transition-transform duration-300 hover:scale-[1.04]"
         >
           <Image
-            src={livedealer}
+            src={livedealernew}
             alt="Live Dealer"
             className="w-full h-[100px] md:h-40 object-cover md:object-fill"
             priority
@@ -265,7 +266,7 @@ export default function HeroSection() {
                transition-transform duration-300 hover:scale-[1.04]"
         >
           <Image
-            src={fishingimg}
+            src={fishingnew}
             alt="Fishing"
             className="w-full h-[100px] md:h-40 object-cover md:object-fill"
             priority
