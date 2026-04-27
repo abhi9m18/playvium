@@ -76,8 +76,8 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
             className={`flex items-center justify-between w-full px-3 py-2.5 rounded-lg transition-all
               ${
                 isActive
-                  ? "bg-[#2A2D33] text-white"
-                  : "bg-[#202328] text-gray-300 hover:bg-[#262A30]"
+                  ? "bg-[#187BF0] text-white"
+                  : " bg-[#0C2851] text-white"
               }`}
           >
             <div className="flex items-center gap-3">
@@ -98,7 +98,7 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
   );
 
   return (
-    <aside className="w-full md:w-85 h-full flex flex-col bg-transparent md:bg-[#191D24] text-white p-0 md:p-4 mt-4 md:-mt-2">
+    <aside className="w-full md:w-85 h-full flex flex-col bg-transparent md:bg-[#06162D] text-white p-0 md:p-4 mt-4 md:-mt-2">
       {/* ================= MOBILE VIEW ================= */}
       <div className="md:hidden">
         {profileOpen ? (
@@ -169,15 +169,6 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
 
               {renderMenu(mobilemenu)}
 
-              <button
-                onClick={logout}
-                className="flex items-center gap-3 mt-4 px-3 py-2.5 rounded-lg
-                           bg-[#202328] hover:bg-[#33373F]
-                           text-red-400 transition-all"
-              >
-                <Image src={logouticon} alt="logout" width={20} height={20} />
-                <span className="text-sm">Logout</span>
-              </button>
             </div>
           </div>
         )}
@@ -201,15 +192,6 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
 
         {renderMenu(menu)}
 
-        <button
-          onClick={logout}
-          className="flex items-center gap-3 mt-4 px-3 py-2.5 rounded-lg
-                     bg-[#202328] hover:bg-[#33373F]
-                     text-red-400 transition-all"
-        >
-          <LogOut size={18} />
-          <span className="text-sm">Logout</span>
-        </button>
       </div>
     </aside>
   );

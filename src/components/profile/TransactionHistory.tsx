@@ -172,7 +172,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
         {/* TYPE */}
         <Select value={txType} onValueChange={(value) => setTxType(value as TransactionType | "All")}>
           <SelectTrigger
-            className="relative w-full h-10 bg-[#191D24] border border-[#2A303C]
+            className="relative w-full h-10 bg-[#06162D] border border-[#2A303C]
               text-white rounded-lg px-3 pr-10 focus:ring-1 focus:ring-[#2A303C]
               focus:ring-offset-0 [&>svg]:hidden"
           >
@@ -182,7 +182,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
             </span>
           </SelectTrigger>
 
-          <SelectContent className="bg-[#191D24] border-[#2A303C] text-white z-50">
+          <SelectContent className="bg-[#06162D] border-[#2A303C] text-white z-50">
             {filterOptions[0].options.map((opt) => (
               <SelectItem key={opt} value={opt} className="cursor-pointer focus:bg-[#2A303C] focus:text-white">
                 {opt}
@@ -194,7 +194,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
         {/* SOURCE */}
         <Select value={source} onValueChange={(value) => setSource(value as TransactionSource | "All")}>
           <SelectTrigger
-            className="relative w-full h-10 bg-[#191D24] border border-[#2A303C]
+            className="relative w-full h-10 bg-[#06162D] border border-[#2A303C]
               text-white rounded-lg px-3 pr-10 focus:ring-1 focus:ring-[#2A303C]
               focus:ring-offset-0 [&>svg]:hidden"
           >
@@ -204,7 +204,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
             </span>
           </SelectTrigger>
 
-          <SelectContent className="bg-[#191D24] border-[#2A303C] text-white z-50">
+          <SelectContent className="bg-[#06162D] border-[#2A303C] text-white z-50">
             {filterOptions[1].options.map((opt) => (
               <SelectItem key={opt} value={opt} className="cursor-pointer focus:bg-[#2A303C] focus:text-white">
                 {opt}
@@ -216,7 +216,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
         {/* RANGE */}
         <Select value={range} onValueChange={setRange}>
           <SelectTrigger
-            className="relative w-full h-10 bg-[#191D24] border border-[#2A303C]
+            className="relative w-full h-10 bg-[#06162D] border border-[#2A303C]
               text-white rounded-lg px-3 pr-10 focus:ring-1 focus:ring-[#2A303C]
               focus:ring-offset-0 [&>svg]:hidden"
           >
@@ -226,7 +226,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
             </span>
           </SelectTrigger>
 
-          <SelectContent className="bg-[#191D24] border-[#2A303C] text-white z-50">
+          <SelectContent className="bg-[#06162D] border-[#2A303C] text-white z-50">
             {filterOptions[2].options.map((opt) => (
               <SelectItem key={opt} value={opt} className="cursor-pointer focus:bg-[#2A303C] focus:text-white">
                 {opt}
@@ -239,7 +239,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
       {/* ============================
           TABLE
       ============================ */}
-      <div className="bg-[#191D24] rounded-xl border border-[#2A303C] overflow-hidden">
+      <div className="bg-[#06162D] rounded-xl border border-[#2A303C] overflow-hidden">
         {/* TABLE HEADER */}
         <div className="grid grid-cols-[1fr_1.8fr_1fr_1fr] px-4 md:px-6 py-3 text-xs md:text-sm text-neutral-400 border-b border-[#2A303C]">
           <span>Type</span>

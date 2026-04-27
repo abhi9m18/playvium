@@ -104,18 +104,18 @@ export default function BetHistory({ header }: BetHistoryProps) {
             <SelectTrigger
               className="
                 relative w-full h-10
-                bg-[#191D24] border border-[#2A303C]
+                bg-[#06162D] border border-[#2A303C]
                 text-white rounded-lg
                 px-3 pr-10
 
-                hover:bg-[#191D24]
+                hover:bg-[#06162D]
                 hover:text-white
 
-                focus:bg-[#191D24]
+                focus:bg-[#06162D]
                 focus:text-white
                 focus:ring-1 focus:ring-[#2A303C]
 
-                data-[state=open]:bg-[#191D24]
+                data-[state=open]:bg-[#06162D]
                 data-[state=open]:text-white
 
                 [&>svg]:hidden
@@ -137,7 +137,7 @@ export default function BetHistory({ header }: BetHistoryProps) {
               </span>
             </SelectTrigger>
 
-            <SelectContent className="bg-[#191D24] border-[#2A303C] text-white z-50">
+            <SelectContent className="bg-[#06162D] border-[#2A303C] text-white z-50">
               {filter.options.map((option) => (
                 <SelectItem
                   key={option}
@@ -162,7 +162,7 @@ export default function BetHistory({ header }: BetHistoryProps) {
       {/* ============================
           TABLE
       ============================ */}
-      <div className="w-full bg-[#191D24] rounded-xl border border-[#2A303C] overflow-hidden">
+      <div className="w-full bg-[#06162D] rounded-xl border border-[#2A303C] overflow-hidden">
         {/* TABLE HEADER */}
         <div
           className="
