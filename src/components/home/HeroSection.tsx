@@ -7,7 +7,7 @@ import {
   slot,
   slotimg,
   pokerimg,livedealer,fishingimg,
-  herocasino,
+  herocasino,casinobanner,
   herosports,
   herodragon,
   herosportsmobile,
@@ -208,7 +208,7 @@ export default function HeroSection() {
         >
           <div className="relative w-full h-[120px] md:h-auto aspect-[2.2/1] md:aspect-[2.2/1]">
             <Image
-              src={herocasino}
+              src={casinobanner}
               alt="Casino"
               fill
               className="object-cover md:object-fill"
