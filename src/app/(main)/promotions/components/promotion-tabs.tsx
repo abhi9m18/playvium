@@ -12,7 +12,7 @@ export default function PromotionTabs({ activeTab, setActiveTab }: {
             <div className="mx-auto relative inline-flex rounded-lg p-1 bg-[#000000]">
                 {/* Sliding Highlight */}
                 <motion.div
-                    className="absolute top-1 bottom-1 rounded-md bg-[#384252]"
+                    className="absolute top-1 bottom-1 rounded-md bg-[#187BF0]"
                     layout
                     transition={{ type: "spring", stiffness: 300, damping: 25 }}
                     initial={false}

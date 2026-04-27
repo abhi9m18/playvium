@@ -172,7 +172,7 @@ export default function HeroSection() {
                   {/* CTA BUTTON */}
                   <button
                     onClick={() => handleBannerAction(banner)}
-                    className="w-[130px] sm:w-[180px] h-[45px] sm:h-[55px] border-2 md:border border-white/40 rounded-xl text-white text-[16px] sm:text-[18px] flex items-center justify-center md:mt-5 shadow-[0_0_20px_rgba(31,37,46,0.4)] transition-transform hover:scale-[1.03] active:scale-95"
+                    className="w-[130px] sm:w-[180px] h-[45px] sm:h-[55px]  rounded-xl text-white text-[16px] sm:text-[18px] flex items-center justify-center md:mt-5 shadow-[0_0_20px_rgba(31,37,46,0.4)] transition-transform hover:scale-[1.03] active:scale-95"
                     style={{ background: "linear-gradient(90deg, #0D6BEF 0%, #6FFCF7 123.17%)" }}
                   >
                     {banner.buttonText}

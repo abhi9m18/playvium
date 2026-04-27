@@ -100,7 +100,7 @@ export default function PromotionCard({ promotion }: PromotionCardProps) {
         </span>
 
         {/* Right button */}
-        <button className="bg-[#2E343F] px-3 py-2 rounded-md text-sm text-[#e37cf3] whitespace-nowrap">
+        <button className=" px-3 py-2 rounded-md text-sm text-[#187BF0] whitespace-nowrap">
           {promotion.archived ? "Archived" : promotion.status}
         </button>
       </div>
