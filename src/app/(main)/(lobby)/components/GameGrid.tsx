@@ -346,7 +346,7 @@ export default function GameBrowser({
             <div className="w-full flex justify-center pt-6 pb-2">
               <button
                 onClick={() => setShowAll(true)}
-                className="px-8 py-3 bg-[#384252] hover:bg-[#A02DD6] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+                className="px-8 py-3 bg-[#187BF0] hover:bg-[#187BF0] text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 View All
               </button>
