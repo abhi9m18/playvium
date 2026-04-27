@@ -356,16 +356,16 @@ export function AppSidebar({
         }}
         collapsible="icon"
         {...props}
-        className="mt-14  border-none shadow-none bg-[#1A2332] hidden lg:flex"
+        className="mt-14  border-none shadow-none bg-[#06162D] hidden lg:flex"
       >
-        <SidebarContent className="px-3 py-3 md:pb-18 bg-[#1A2332] gap-3 overflow-y-auto scrollbar-hide group-data-[collapsible=icon]:overflow-visible">
+        <SidebarContent className="px-3 py-3 md:pb-18 bg-[#06162D] gap-3 overflow-y-auto scrollbar-hide group-data-[collapsible=icon]:overflow-visible">
           {filteredSidebar.map((group, groupIndex) => (
             <SidebarGroup key={groupIndex} className="h-auto overflow-visible">
               <SidebarGroupContent
                 className={cn(
                   "border border-gray-700 transition-colors",
-                  "bg-[#263343] rounded-2xl p-0",
-                  "group-data-[collapsible=icon]:bg-[#263343]",
+                  "bg-[#06162D] rounded-2xl p-0",
+                  "group-data-[collapsible=icon]:bg-[#06162D]",
                   "group-data-[collapsible=icon]:p-2",
                   "group-data-[collapsible=icon]:rounded-2xl"
                 )}

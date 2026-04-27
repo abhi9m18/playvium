@@ -34,8 +34,12 @@ import blurhomebanner8 from "./blurhomebanner8.png";
 
 import homebannerone from "./homesliderone.svg";
 import herocasino from "./herocasino.svg";
+import casinobanner from "./casinobanner.svg";
 import herosports from "./herosports.svg";
 import herosportsmobile from "./herosportsmobile.svg";
+
+
+import sportbanner from "./sportbanner.svg";
 import herodragon from "./herodragon.svg";
 import badgegold from "./badgegold.svg";
 import slot from "./slot.svg";
@@ -48,7 +52,7 @@ import fishingherobanner from "./fishingherobanner.svg";
 
 export {
   slot,
-  slotimg,pokerimg,livedealer,fishingimg,
+  slotimg,pokerimg,livedealer,fishingimg,casinobanner,
   fishingherobanner,
   liveherobanner,
   pokerherobanner,
