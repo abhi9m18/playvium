@@ -188,11 +188,11 @@ export default function Header({
             className="flex ml-2 items-center"
           >
             <Image
-              height={40}
+              height={240}
               width={160}
               src={logo}
               alt="Logo"
-              className="w-36 h-10"
+              className="w-45 h-50"
             />
           </Link>
         </div>

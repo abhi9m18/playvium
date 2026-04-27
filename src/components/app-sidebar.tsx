@@ -401,9 +401,9 @@ export function AppSidebar({
                           className={cn(
                             "w-full h-12 px-3 rounded-lg flex hover:text-[#ffffff] items-center justify-center gap-6 transition-all duration-200",
                             // Expanded sidebar styles
-                            isActive 
-                              ? "!bg-[#B93DEB]  text-white" 
-                              : "text-[#ffffff] hover:bg-[#ffffff]",
+                            isActive
+                              ? "!bg-[#2B97F2]  text-white"
+                              : "text-[#ffffff] hover:bg-[#2B97F2]",
                             // Collapsed sidebar styles
                             "group-data-[collapsible=icon]:w-12",
                             "group-data-[collapsible=icon]:h-12",
@@ -414,7 +414,7 @@ export function AppSidebar({
                             "group-data-[collapsible=icon]:justify-center",
                             // Collapsed active state - FORCE BACKGROUND
                             isActive
-                              ? "group-data-[collapsible=icon]:!bg-[#B93DEB]"
+                              ? "group-data-[collapsible=icon]:!bg-[#2B97F2]"
                               : "group-data-[collapsible=icon]:hover:bg-transparent"
                           )}
                         >
@@ -657,8 +657,8 @@ export function MobileSidebar({
                   className={cn(
                     "w-full flex  items-center gap-4 px-4 py-2 rounded-xl transition-all duration-200",
                     isActive
-                      ? "!bg-[#B93DEB] text-white"
-                      : "text-[#d3d5db] bg-[#242B35] hover:bg-transparent"
+                      ? "!bg-[#2B97F2] text-white"
+                      : "text-[#d3d5db] bg-[#242B35] hover:bg-[#2B97F2]"
                   )}
                 >
                   <div className="relative w-[26px] h-[26px]">
