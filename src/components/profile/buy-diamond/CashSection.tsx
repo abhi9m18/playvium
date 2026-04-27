@@ -72,7 +72,7 @@ function DiamondCard({ image, amount, price, free, onSelect }: CardProps) {
   return (
     <div
       onClick={onSelect}
-      className="w-full cursor-pointer rounded-lg border border-[#2A2D34] bg-[#191D24] transition hover:border-[#384252]"
+      className="w-full cursor-pointer rounded-lg border border-[#2A2D34] bg-[#06162D] transition hover:border-[#384252]"
     >
       <div className="flex items-center gap-2 border-b border-slate-800 px-2 py-1 sm:px-4 sm:py-2">
         <Image src={coingreen} alt="cash" width={16} height={16} />
@@ -90,7 +90,7 @@ function DiamondCard({ image, amount, price, free, onSelect }: CardProps) {
         <p className="mt-1 text-xs text-gray-400">Wulf Coin</p>
       </div>
 
-      <div className="mt-3 rounded-b-lg bg-[#384252] px-3 py-3 hover:bg-[#187BF0]">
+      <div className="mt-3 rounded-b-lg bg-[#4576c5] px-3 py-3 hover:bg-[#187BF0]">
         <div className="flex items-center justify-between">
           <span className="text-sm text-white/80">Prize</span>
           <span className="flex items-end gap-1 font-bold text-white">

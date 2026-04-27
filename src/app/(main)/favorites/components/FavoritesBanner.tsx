@@ -3,7 +3,7 @@ import { stars } from "@/assets/images/favorites";
 
 export default function FavoritesBanner() {
   return (
-    <div className="relative w-full h-40 sm:h-40 md:h-48 bg-[#181D25] rounded-xl sm:rounded-2xl flex items-center ">
+    <div className="relative w-full md:mt-15 h-40 sm:h-40 md:h-48 bg-[#181D25] rounded-xl sm:rounded-2xl flex items-center ">
       <h1 className="absolute bottom-5 left-5 md:left-10 text-white font-[Inter] font-semibold text-xl sm:text-xl md:text-2xl z-10">
         Favorites
       </h1>
