@@ -402,8 +402,8 @@ export function AppSidebar({
                             "w-full h-12 px-3 rounded-lg flex hover:text-[#ffffff] items-center justify-center gap-6 transition-all duration-200",
                             // Expanded sidebar styles
                             isActive
-                              ? "!bg-[#2B97F2]  text-white"
-                              : "text-[#ffffff] hover:bg-[#2B97F2]",
+                              ? "text-white"
+                              : "text-[#ffffff] hover:bg-transparent",
                             // Collapsed sidebar styles
                             "group-data-[collapsible=icon]:w-12",
                             "group-data-[collapsible=icon]:h-12",
@@ -412,11 +412,11 @@ export function AppSidebar({
                             "group-data-[collapsible=icon]:flex",
                             "group-data-[collapsible=icon]:items-center",
                             "group-data-[collapsible=icon]:justify-center",
-                            // Collapsed active state - FORCE BACKGROUND
                             isActive
-                              ? "group-data-[collapsible=icon]:!bg-[#2B97F2]"
+                              ? "group-data-[collapsible=icon]:bg-transparent"
                               : "group-data-[collapsible=icon]:hover:bg-transparent"
                           )}
+                          style={isActive ? { background: "linear-gradient(90deg, #0D6BEF 0%, #6FFCF7 123.17%)" } : undefined}
                         >
                           <div className="flex gap-3 w-full items-center group-data-[collapsible=icon]:justify-center relative">
                             {/* Show hicon on hover or active, otherwise show normal icon */}
@@ -657,9 +657,10 @@ export function MobileSidebar({
                   className={cn(
                     "w-full flex  items-center gap-4 px-4 py-2 rounded-xl transition-all duration-200",
                     isActive
-                      ? "!bg-[#2B97F2] text-white"
-                      : "text-[#d3d5db] bg-[#242B35] hover:bg-[#2B97F2]"
+                      ? "text-white"
+                      : "text-[#d3d5db] bg-[#242B35] hover:bg-transparent"
                   )}
+                  style={isActive ? { background: "linear-gradient(90deg, #0D6BEF 0%, #6FFCF7 123.17%)" } : undefined}
                 >
                   <div className="relative w-[26px] h-[26px]">
                     <Image
