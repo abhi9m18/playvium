@@ -121,7 +121,7 @@ export default function ChatBotModal() {
                 className={`w-8 h-8 rounded-full flex items-center justify-center ${
                   msg.sender === "user"
                     ? "bg-[#384252]"
-                    : "bg-[#B93DEB]"
+                    : "bg-[#187BF0]"
                 }`}
               >
                 <User className="w-4 h-4 text-white" />
@@ -142,7 +142,7 @@ export default function ChatBotModal() {
                 <div
                   className={`px-3 py-2 rounded-xl ${
                     msg.sender === "user"
-                      ? "bg-[#B93DEB] text-white rounded-br-none"
+                      ? "bg-[#187BF0] text-white rounded-br-none"
                       : "bg-[#2A2F36] text-gray-200 rounded-bl-none"
                   }`}
                 >
@@ -167,7 +167,7 @@ export default function ChatBotModal() {
               className="
                 w-full bg-[#15181E] border border-gray-700
                 rounded-full px-4 py-2 pr-14 text-sm
-                focus:outline-none focus:ring-2 focus:ring-[#B93DEB]
+                focus:outline-none focus:ring-2 focus:ring-[#187BF0]
               "
             />
 
@@ -193,7 +193,7 @@ export default function ChatBotModal() {
               disabled={!message || loading || uploading}
               className="
                 absolute right-2 top-1/2 -translate-y-1/2
-                p-2 rounded-full bg-[#B93DEB]
+                p-2 rounded-full bg-[#187BF0]
               "
             >
               {loading ? (

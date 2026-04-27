@@ -353,64 +353,44 @@ export default function Header({
             </div>
           ) : (
             <>
-              <Button
-                variant="ghost"
-                size="icon"
+              <button
                 onClick={open}
-                className={`w-10 h-10 rounded-md bg-black hover:bg-black p-2`}
+                className={`w-10 h-10 rounded-lg bg-[#092D61] flex items-center justify-center hover:bg-black/80 transition`}
               >
-                <Image
-                  height={40}
-                  width={120}
-                  src={search2}
-                  alt="Search"
-                  className="w-30 h-9"
-                />
-              </Button>
+                <Image src={search2} alt="Search" width={20} height={20} />
+              </button>
 
               <Button
                 onClick={() => openAuthModal("login")}
-                className="h-10 px-6 rounded-md bg-[#384252] border border-[#5B6B86] text-white font-bold text-[15px] hover:bg-[#4a5464]"
+                className="h-10 px-6 rounded-lg bg-[#384252] border border-[#5B6B86] text-white font-bold text-[15px] hover:bg-[#4a5464] transition"
               >
                 Sign In
               </Button>
 
               <Button
                 onClick={() => openAuthModal("register")}
-                className="h-10 px-6 rounded-md bg-[#B93DEB] border border-[#CA6BEF] text-white font-bold text-[15px] hover:bg-[#a32dd6]"
+                className="h-10 px-6 rounded-lg bg-[#187BF0] text-white font-bold text-[15px] hover:bg-[#1469D4] transition"
               >
                 Sign Up
               </Button>
 
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => openChatModal("chat")}
-                className={`w-10 h-10 rounded-md bg-black hover:bg-black p-2`}
-              >
-                <Image
-                  height={40}
-                  width={120}
-                  src={message}
-                  alt="Chat"
-                  className="w-30 h-9"
-                />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setIsLanguageOpen(true)}
-                // onClick={() => openChatModal("chat")}
-                className={`w-10 h-10 rounded-md bg-black hover:bg-black p-2`}
-              >
-                <Image
-                  height={40}
-                  width={120}
-                  src={globe}
-                  alt="Chat"
-                  className="w-30 h-9"
-                />
-              </Button>
+              <div className="flex items-center bg-[#092D61] rounded-lg overflow-hidden">
+                <button
+                  onClick={() => openChatModal("chat")}
+                  className="w-10 h-10 flex items-center justify-center hover:bg-black/80 transition"
+                >
+                  <Image src={message} alt="Chat" width={20} height={20} />
+                </button>
+
+                <div className="w-px h-6 bg-white/20" />
+
+                <button
+                  onClick={() => setIsLanguageOpen(true)}
+                  className="w-10 h-10 flex items-center justify-center hover:bg-black/80 transition"
+                >
+                  <Image src={globe} alt="Language" width={20} height={20} />
+                </button>
+              </div>
             </>
           )}
         </div>
@@ -536,39 +516,29 @@ export default function Header({
               {/* Unauthenticated Mobile Header */}
               <Button
                 onClick={() => openAuthModal("login")}
-                className="h-9 px-3 rounded-lg bg-[#384252] border border-[#5B6B86] text-white font-normal text-sm hover:bg-[#4a5464]"
+                className="h-9 px-3 rounded-lg bg-[#384252] border border-[#5B6B86] text-white font-normal text-sm hover:bg-[#4a5464] transition"
               >
                 Sign In
               </Button>
 
               <Button
                 onClick={() => openAuthModal("register")}
-                className="h-9 px-3 rounded-lg bg-[#B93DEB] border border-[#CA6BEF] text-white font-normal text-sm hover:bg-[#a32dd6]"
+                className="h-9 px-3 rounded-lg bg-[#187BF0] text-white font-bold text-sm hover:bg-[#1469D4] transition"
               >
                 Sign Up
               </Button>
 
-              {/* <Button
-                variant="ghost"
-                size="icon"
-                className="w-9 h-9 rounded-lg bg-black hover:bg-[#1f2937] text-white"
-              >
-                <Image src={globe} alt="Language" width={22} height={22} />
-              </Button> */}
-              <Button
-                variant="ghost"
-                size="icon"
+              <button
                 onClick={() => setIsLanguageOpen(true)}
-                className={`w-10 h-10 rounded-md bg-black hover:bg-black p-2`}
+                className={`w-10 h-10 rounded-lg bg-[#092D61] flex items-center justify-center hover:bg-black/80 transition`}
               >
                 <Image
-                  height={40}
-                  width={120}
+                  height={20}
+                  width={20}
                   src={globe}
                   alt="Language"
-                  className="w-30 h-9"
                 />
-              </Button>
+              </button>
             </>
           )}
         </div>
