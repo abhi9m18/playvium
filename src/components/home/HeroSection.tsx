@@ -92,25 +92,11 @@ export default function HeroSection() {
   return (
     <div className="w-full md:px-0">
       {/* Main Hero Banner */}
-      <div className="relative w-full h-60 sm:h-[420px] md:h-[300px] lg:h-80 overflow-hidden ">
-        {/* Purple Gradient Overlay */}
-
-
-
-        <div className="absolute inset-0 w-full md:w-3/4" style={{ background: "linear-gradient(180deg, #153C6E 0%, rgba(21, 60, 110, 0.00) 100%)" }}></div>
-
-        {/* Hero Dragon Image - Center */}
-        {/* <div className="hidden absolute inset-0 md:flex items-center justify-center z-5 pointer-events-none">
-          <Image
-            src={herodragon}
-            alt="Hero Dragon"
-            className="h-[55%] w-auto sm:h-[50%] object-contain"
-          />
-        </div> */}
+      <div className="relative w-full h-60 sm:h-[420px] md:h-[300px] lg:h-80 overflow-hidden">
 
         {/* Content Container */}
         <div className="relative z-10 h-full flex items-center">
-          <div className="w-full px-4 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
+          <div className="w-full  sm:px-6  lg:px-14 max-w-7xl mx-auto">
             {banners.map((banner, index) => (
               <div
                 key={banner.id}
@@ -118,18 +104,17 @@ export default function HeroSection() {
                   index === currentSlide ? "opacity-100" : "opacity-0"
                 }`}
               >
-                {/* Background Image */}
-                <div
-                  className="absolute right-0 top-0 h-full 
-     w-[80%] sm:w-[40%] md:w-[45%] lg:w-[55%] xl:w-[55%]"
-                >
+                {/* Background Image - full width */}
+                <div className="absolute inset-0">
                   <Image
                     src={banner.backgroundImage}
                     alt={banner.title}
-                    className="w-full h-full object-cover md:object-fill"
+                    className="w-full h-full object-cover object-right"
                     priority
                   />
                 </div>
+                {/* Left-to-right overlay — text area ko solid dark rakhta hai */}
+                <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(to right, #153868 35%, #15386899 55%, transparent 75%)" }} />
 
                 {/* TEXT CONTENT */}
                 <div className="relative z-10 space-y-2 pt-8 sm:pt-12 px-3 sm:px-6 md:px-10 lg:px-14">
@@ -183,7 +168,7 @@ export default function HeroSection() {
           </div>
 
           {/* Pagination Dots */}
-          <div className="absolute bottom-6 md:bottom-6 left-12 md:left-25 -translate-x-1/2 flex gap-1 z-20">
+          <div className="absolute bottom-6 md:bottom-2 left-15 md:left-40 -translate-x-1/2 flex gap-1 z-20">
             {banners.map((_, index) => (
               <button
                 key={index}
@@ -206,7 +191,7 @@ export default function HeroSection() {
           href="/livedealers"
           className="group relative block rounded-2xl md:rounded-3xl overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
         >
-          <div className="relative w-full h-[120px] mt-5.5 md:h-auto aspect-[2.2/1] md:aspect-[2.2/1]">
+          <div className="relative w-full h-[120px] md:h-auto aspect-[2.2/1] md:aspect-[2.2/1]">
             <Image
               src={casinobanner}
               alt="Casino"

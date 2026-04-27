@@ -1,7 +1,8 @@
 import {
   blurhomebanner,
   blurhomebanner2,
-  blurhomebanner3,
+  blurhomebanner3,bannerone, bannertwo,bannerthree,
+   blurhomebanner4,
 } from "@/assets/images/home";
 
 /**
@@ -22,7 +23,7 @@ export const banners = [
     amount: "20,000.00",
     amountSuffix: "in Casino",
     buttonText: "Claim Now",
-    backgroundImage: blurhomebanner,
+    backgroundImage: bannerone,
 
     link: "/register",
 
@@ -43,7 +44,7 @@ export const banners = [
     amount: "",
     amountSuffix: "Get Cash Instantly",
     buttonText: "Invite Friend",
-    backgroundImage: blurhomebanner2,
+    backgroundImage: bannertwo,
 
     link: "/referral",
 
@@ -62,7 +63,7 @@ export const banners = [
     amount: "50,000.00",
     amountSuffix: "Wulf Cash",
     buttonText: "Download",
-    backgroundImage: blurhomebanner3,
+    backgroundImage: bannerthree,
 
     link: "/download",
 

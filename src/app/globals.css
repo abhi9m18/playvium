@@ -440,6 +440,10 @@ body {
   background-color: #06162D !important;
 }
 
+[data-slot="sidebar-container"] {
+  z-index: 40 !important;
+}
+
 [data-sidebar="content"] {
   background-color: #0F131A !important;
 }
