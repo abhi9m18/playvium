@@ -100,7 +100,7 @@ export default function EditProfile({ header }: EditProfileProps) {
               />
 
               {selectedAvatar === avatar.id && (
-                <div className="absolute bottom-0.5 z-50 right-0.5 w-5 h-5 bg-purple-500 border rounded-full flex items-center justify-center">
+                <div className="absolute bottom-0.5 z-50 right-0.5 w-5 h-5 bg-[#187BF0] border rounded-full flex items-center justify-center">
                   <Check className="w-3 h-3 text-white" />
                 </div>
               )}
@@ -117,8 +117,8 @@ export default function EditProfile({ header }: EditProfileProps) {
       <div className="flex justify-center gap-4 px-6">
         <button
           onClick={handleSave}
-          className={`px-8 py-3 w-full bg-[#B93DEB] text-white font-bold rounded-lg 
-           hover:bg-black hover:border hover:border-[#B93DEB] 
+          className={`px-8 py-3 w-full bg-[#187BF0] text-white font-bold rounded-lg 
+           hover:bg-[#187BF0] 
            transition-colors tracking-wider text-sm`}
         >
           Save
