@@ -176,15 +176,14 @@ export default function SidehustleGamesList() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search Games"
-          className="w-full bg-[#14171D] text-white px-12 py-2.5 rounded-xl border border-[#20242C] 
-                     focus:ring-2 focus:ring-[#B93DEB] outline-none transition placeholder:text-white/40"
+          className="w-full bg-[#06162D] text-white px-12 py-2.5 rounded-xl border border-[#20242C]  outline-none transition placeholder:text-white/40"
         />
       </div>
 
       {/* TABS + SORT */}
       <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
         {/* TABS */}
-        <div className="flex items-center gap-2 p-1 bg-[#14171D] rounded-2xl border border-[#242B35] shadow-[0_0_8px_rgba(255,255,255,0.03)] w-full sm:w-auto">
+        <div className="flex items-center gap-2 p-1 bg-[#06162D] rounded-2xl border border-[#242B35] shadow-[0_0_8px_rgba(255,255,255,0.03)] w-full sm:w-auto">
           {tabs.map((t) => (
             <button
               key={t.id}
@@ -192,7 +191,7 @@ export default function SidehustleGamesList() {
               className={`whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all
           ${
             activeTab === t.id
-              ? "bg-[#B93DEB] text-white shadow-[0_0_10px_rgba(185,61,235,0.4)]"
+              ? "bg-[#187BF0] text-white"
               : "text-white/60 hover:text-white"
           }`}
             >
@@ -205,7 +204,7 @@ export default function SidehustleGamesList() {
         <div className="relative w-full sm:w-auto">
           <button
             onClick={() => setSortOpen(!sortOpen)}
-            className="flex items-center justify-between sm:justify-center gap-2 px-4 py-2 rounded-xl bg-[#14171D] border border-[#242B35] text-white/90 hover:text-white text-xs sm:text-sm transition w-full sm:w-auto"
+            className="flex items-center justify-between sm:justify-center gap-2 px-4 py-2 rounded-xl bg-[#06162D] border border-[#242B35] text-white/90 hover:text-white text-xs sm:text-sm transition w-full sm:w-auto"
           >
             {sortOption === "created"
               ? "Created"

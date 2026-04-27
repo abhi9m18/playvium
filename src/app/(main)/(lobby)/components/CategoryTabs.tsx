@@ -31,7 +31,7 @@ export default function CategoryTabs() {
               transition
               ${
                 active === "lobby"
-                  ? "text-white shadow-[0_0_10px_rgba(185,61,235,0.6)]"
+                  ? "text-white "
                   : "text-white/70 hover:text-white"
               }
             `}

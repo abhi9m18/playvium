@@ -71,24 +71,24 @@ export default function RecentsTable() {
         {/* DESKTOP LAYOUT (unchanged) */}
         <div className="hidden md:flex justify-between items-center w-full">
           {/* Tabs */}
-          <div className="flex items-center bg-[#14171D] p-1 border border-[#242B35] rounded-2xl shadow-[0_0_8px_rgba(255,255,255,0.05)]">
+          <div className="flex items-center bg-[#06162D] p-1 border border-[#242B35] rounded-2xl shadow-[0_0_8px_rgba(255,255,255,0.05)]">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`relative px-6 py-2.5 rounded-xl text-sm font-medium transition-all ${
                   activeTab === tab.id
-                    ? "bg-[#B93DEB] text-white shadow-[0_0_10px_rgba(185,61,235,0.6)]"
+                    ? "bg-[#187BF0] text-white "
                     : "text-white/60 hover:text-white"
                 }`}
               >
                 {tab.label}
-                {tab.dot && (
+                {/* {tab.dot && (
                   <>
                     <span className="absolute top-1/2 -translate-y-1/2 right-2 w-2.5 h-2.5 rounded-full bg-pink-400 animate-ping"></span>
                     <span className="absolute top-1/2 -translate-y-1/2 right-2 w-2.5 h-2.5 rounded-full bg-pink-500 shadow-[0_0_6px_rgba(255,0,128,0.8)]"></span>
                   </>
-                )}
+                )} */}
               </button>
             ))}
           </div>
@@ -98,14 +98,14 @@ export default function RecentsTable() {
             {/* Ghost Mode */}
             <div
               onClick={() => setGhostMode(!ghostMode)}
-              className="flex items-center gap-2 cursor-pointer bg-[#14171D] px-4 py-2 rounded-xl"
+              className="flex items-center gap-2 cursor-pointer bg-[#06162D] px-4 py-2 rounded-xl"
             >
               <span className="text-white/80 text-sm">
                 Ghost Mode {ghostMode ? "On" : "Off"}
               </span>
               <div
                 className={`relative w-12 h-6 rounded-full flex items-center transition-all ${
-                  ghostMode ? "bg-purple-500" : "bg-white/20"
+                  ghostMode ? "bg-[#187BF0]" : "bg-white/20"
                 }`}
               >
                 <div
@@ -120,7 +120,7 @@ export default function RecentsTable() {
             <div className="relative">
               <button
                 onClick={() => setOpenLimit(!openLimit)}
-                className="flex items-center gap-2 bg-[#14171D] px-4 py-2 rounded-xl text-white/80 text-sm"
+                className="flex items-center gap-2 bg-[#06162D] px-4 py-2 rounded-xl text-white/80 text-sm"
               >
                 {limit}
                 <ChevronDown className="w-4 h-4" />
@@ -177,7 +177,7 @@ export default function RecentsTable() {
               </span>
               <div
                 className={`relative w-12 h-6 rounded-full flex items-center transition-all ${
-                  ghostMode ? "bg-purple-500" : "bg-white/20"
+                  ghostMode ? "bg-[#187BF0]" : "bg-white/20"
                 }`}
               >
                 <div
@@ -222,7 +222,7 @@ export default function RecentsTable() {
       {/* ===================================================== */}
       {/* ===================== DESKTOP TABLE ================= */}
       {/* ===================================================== */}
-      <div className="hidden md:block bg-[#14171D] w-full rounded-xl overflow-hidden border border-white/10">
+      <div className="hidden md:block bg-[#06162D] w-full rounded-xl overflow-hidden border border-white/10">
         {/* Table Header */}
         <div className="grid grid-cols-6 text-white/60 text-[16px] px-6 py-3 border-b border-white/10">
           <span>Game</span>
