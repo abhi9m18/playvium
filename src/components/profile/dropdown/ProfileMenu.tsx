@@ -10,7 +10,7 @@ import {
   usercheck,
   wallet,
 } from "@/assets/icons";
-import { dino } from "@/assets/images/home";
+import { dino , mennew } from "@/assets/images/home";
 import { useProfileMenu } from "@/context/ProfileMenuContext";
 import { useAuthStore } from "@/store/auth-store";
 
@@ -69,7 +69,7 @@ export default function ProfileMenu({
             <Image
               height={1000}
               width={1000}
-              src={dino}
+              src={mennew}
               alt="Language"
               className="w-6 h-6"
             />

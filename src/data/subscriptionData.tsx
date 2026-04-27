@@ -2,6 +2,9 @@ import {
   basic,
   basicstar,
   player,
+  subscriptionone,
+  subscriptiontwo,
+  subscriptionthree,  
   playerstar,
   hustler,
   hustlerstar,
@@ -11,7 +14,7 @@ export const subscriptionTiers = [
   {
     id: 1,
     name: "Basic",
-    image: basic,
+    image: subscriptionone,
     price: "",
     perMonth: "",
     buttonText: "FREE",
@@ -19,7 +22,7 @@ export const subscriptionTiers = [
   {
     id: 2,
     name: "Player",
-    image: player,
+    image: subscriptiontwo,
     price: "20",
     perMonth: "per month",
     buttonText: "Buy",
@@ -27,7 +30,7 @@ export const subscriptionTiers = [
   {
     id: 3,
     name: "Hustler",
-    image: hustler,
+    image: subscriptionthree,
     price: "50",
     perMonth: "per month",
     buttonText: "Buy",

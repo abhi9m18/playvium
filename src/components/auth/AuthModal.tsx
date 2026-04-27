@@ -9,6 +9,7 @@ import ResetPasswordForm from "./forms/ResetPasswordForm";
 import Image from "next/image";
 import DesktopWolf from "@/assets/images/auth/casino-wolf-desktop.svg";
 import MobileWolf from "@/assets/images/auth/casino-wolf-mobile.svg";
+import  loginmg  from "@/assets/images/auth/loginmg.svg";
 import { useEffect, useRef } from "react";
 
 const AUTH_TEXT: Record<
@@ -98,7 +99,7 @@ export default function AuthModal() {
           >
             {/* Desktop + Tablet Image */}
             <Image
-              src={DesktopWolf}
+              src={loginmg}
               alt="Casino Wolf"
               fill
               priority

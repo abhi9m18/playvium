@@ -20,7 +20,7 @@ import {
   edit,
 } from "@/assets/icons";
 
-import { dino } from "@/assets/images/home";
+import { dino,mennew } from "@/assets/images/home";
 import { useAuthStore } from "@/store/auth-store";
 import { useProfileMenu } from "@/context/ProfileMenuContext";
 import EditProfile from "./EditProfile";
@@ -187,7 +187,8 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
       <div className="hidden md:flex flex-col h-full">
         <div className="flex items-center gap-4 mb-6">
           <Image
-            src={user.avatar}
+          src={mennew}
+            // src={user.avatar}
             width={60}
             height={60}
             alt="avatar"

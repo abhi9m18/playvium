@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { annupic } from "@/assets/images/announcement";
+import { annupic,announce } from "@/assets/images/announcement";
 import Image from "next/image";
 const Announcement = () => {
   const bonusCards = [
@@ -85,7 +85,7 @@ const Announcement = () => {
 
                   <div className="relative rounded-lg cursor-pointer hover:scale-[1.02] transition-transform duration-200 overflow-hidden">
                     <Image
-                      src={annupic}
+                      src={announce}
                       alt=""
                       className="w-full h-auto object-cover rounded-xl"
                     />

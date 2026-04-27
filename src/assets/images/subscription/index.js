@@ -4,7 +4,9 @@ import playerstar from "./playerstar.svg"
 import player from "./player.svg"
 import hustler from "./hustler.svg"
 import hustlerstar from "./hustlerstar.svg"
-
+import subscriptionone from "./subscriptionone.svg"
+import subscriptiontwo from "./subscriptiontwo.svg"
+import subscriptionthree from "./subscriptionthree.svg"
 export {
     basic,
     basicstar,
@@ -12,4 +14,8 @@ export {
     playerstar,
     hustler,
     hustlerstar,
+    subscriptionone,
+    subscriptiontwo,
+    subscriptionthree
+
 }
