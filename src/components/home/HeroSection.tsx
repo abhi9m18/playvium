@@ -115,7 +115,7 @@ export default function HeroSection() {
                   />
                 </div>
                 {/* Left-to-right overlay — text area ko solid dark rakhta hai */}
-                <div className="absolute inset-0 z-[1]" style={{ background: "linear-gradient(to right, #153868 35%, #15386899 55%, transparent 75%)" }} />
+                <div className="absolute inset-0 z-[1]" />
 
                 {/* TEXT CONTENT */}
                 <div className="relative z-10 space-y-2 pt-8 sm:pt-12 px-3 sm:px-6 md:px-10 lg:px-14">
