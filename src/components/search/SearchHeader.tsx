@@ -407,7 +407,7 @@ export default function SearchHeader({
                   setProvider("All");
                   onFilterChange();
                 }}
-                className="w-full py-2.5 md:py-3 text-[#B93DEB] text-xs md:text-sm font-semibold border-t border-white/10 hover:bg-[#B93DEB]/10 transition-colors flex items-center justify-center gap-2"
+                className="w-full py-2.5 md:py-3 text-[#B93DEB] text-xs md:text-sm font-semibold border-t border-white/10 /10 transition-colors flex items-center justify-center gap-2"
               >
                 <svg
                   className="w-3.5 h-3.5 md:w-4 md:h-4"

@@ -106,7 +106,7 @@ const EmptyStatePage = ({
               text-white
               bg-[#cf4cff]
               shadow-[0_0_35px_rgba(185,61,235,0.65)]
-              hover:bg-[#B93DEB]
+              
               hover:shadow-[0_0_35px_rgba(185,61,235,0.45)]
               active:scale-95
               transition-all duration-200

@@ -107,7 +107,7 @@ export default function RolloverHistory({ header }: BetHistoryProps) {
               <span
                 className="
                   absolute right-2 top-1/2 -translate-y-1/2
-                  bg-[#384252] rounded-sm
+                  bg-[#0C2851] rounded-sm
                   w-6 h-6
                   flex items-center justify-center
                   pointer-events-none

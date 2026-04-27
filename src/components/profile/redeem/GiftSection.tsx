@@ -78,7 +78,7 @@ export default function GiftCardPage() {
           />
 
           {/* Spin Left Button */}
-          <button className="bg-[#B93DEB] text-white px-10 py-3 rounded-lg font-semibold shadow-md hover:bg-[#b14ae6] mt-6">
+          <button className="bg-[#187BF0] text-white px-10 py-3 rounded-lg font-semibold shadow-md hover:bg-[#b14ae6] mt-6">
             10 Spin Left
           </button>
         </div>
@@ -116,7 +116,7 @@ export default function GiftCardPage() {
                 handleConfirmRedeem();
                 setIsRedemptionOpen(true);
               }}
-              className="bg-[#384252] w-full text-white py-2 rounded-md font-bold text-sm mt-6 hover:bg-[#b14ae6]"
+              className="bg-[#384252] w-full text-white py-2 rounded-md font-bold text-sm mt-6 hover:bg-[#187BF0]"
             >
               Confirm Redeem
             </button>

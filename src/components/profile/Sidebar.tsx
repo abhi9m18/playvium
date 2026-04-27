@@ -76,7 +76,7 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
             className={`flex items-center justify-between w-full px-3 py-2.5 rounded-lg transition-all
               ${
                 isActive
-                  ? "bg-[#2A2D33] text-purple-400"
+                  ? "bg-[#2A2D33] text-white"
                   : "bg-[#202328] text-gray-300 hover:bg-[#262A30]"
               }`}
           >
@@ -85,12 +85,12 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
               <span className="text-sm">{item.label}</span>
             </div>
 
-            <ChevronRight
+            {/* <ChevronRight
               size={12}
               className={`w-5 h-5 rounded-sm bg-gray-800 ${
                 isActive ? "text-purple-400" : "text-gray-400"
               }`}
-            />
+            /> */}
           </button>
         );
       })}

@@ -77,7 +77,7 @@ export default function ProfilePageClient() {
   };
 
   return (
-    <div className="text-white bg-[#15181E] p-4 md:p-7 mt-12 min-h-screen">
+    <div className="text-white bg-[#060B1E] p-4 md:p-7 mt-12 min-h-screen">
 
       {/* MOBILE VIEW */}
       <div className="flex md:hidden">

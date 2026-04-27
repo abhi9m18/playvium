@@ -213,7 +213,7 @@ export default function HeroSection() {
             <div className="relative inline-flex items-center gap-3 mb-8 md:mb-0 justify-center md:justify-start w-full">
   <Button
     onClick={() => setOpen(true)}
-    className="bg-[#B93DEB] hover:bg-[#B93DEB]/90 text-white text-base md:text-lg font-semibold px-28 md:px-18 py-5 md:py-6 rounded-lg shadow-xl transition-all hover:scale-105"
+    className="bg-[#B93DEB] /90 text-white text-base md:text-lg font-semibold px-28 md:px-18 py-5 md:py-6 rounded-lg shadow-xl transition-all hover:scale-105"
   >
     Join Waitlist
   </Button>

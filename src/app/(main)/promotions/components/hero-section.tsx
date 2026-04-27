@@ -81,7 +81,7 @@ export default function HeroSection() {
       bg-transparent
       text-white
       border-2 border-[#384252]
-      hover:bg-[#B93DEB]
+      
       hover:border-[#B93DEB]
       transition-all
       duration-300

@@ -102,7 +102,7 @@ export default function PaymentFlow() {
           <div className="flex justify-center mt-4 mb-4">
             <button
               onClick={handleProceedToSummary}
-              className="w-85 h-9 bg-[#B93DEB] rounded-md text-white text-sm font-bold flex justify-center items-center"
+              className="w-85 h-9 bg-[#187BF0] rounded-md text-white text-sm font-bold flex justify-center items-center"
             >
               Proceed to payment
             </button>
@@ -119,7 +119,7 @@ export default function PaymentFlow() {
           <div className="text-center mb-10">
             <h2 className="text-white text-xl font-bold">Order Summary</h2>
 
-            <p className="text-[#D96BFF] text-3xl font-bold mt-1">200,000</p>
+            <p className="text-[#187BF0] text-3xl font-bold mt-1">200,000</p>
 
             <p className="text-gray-400 text-xs mt-1">
               35,000,000 Diamond and bonus FREE 104.00
@@ -153,7 +153,7 @@ export default function PaymentFlow() {
 
             <button
               onClick={handleProceedToPayment}
-              className="w-85 h-9 bg-[#B93DEB] rounded-md text-white text-sm font-bold flex justify-center items-center mx-auto"
+              className="w-85 h-9 bg-[#187BF0] rounded-md text-white text-sm font-bold flex justify-center items-center mx-auto"
             >
               Proceed to payment
             </button>

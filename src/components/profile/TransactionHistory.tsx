@@ -177,7 +177,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
               focus:ring-offset-0 [&>svg]:hidden"
           >
             <SelectValue placeholder="Transaction Type" />
-            <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#384252] rounded-sm w-6 h-6 flex items-center justify-center pointer-events-none">
+            <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#0C2851] rounded-sm w-6 h-6 flex items-center justify-center pointer-events-none">
               <ChevronDown className="w-4 h-4 text-white opacity-80" />
             </span>
           </SelectTrigger>
@@ -199,7 +199,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
               focus:ring-offset-0 [&>svg]:hidden"
           >
             <SelectValue placeholder="Source" />
-            <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#384252] rounded-sm w-6 h-6 flex items-center justify-center pointer-events-none">
+            <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#0C2851] rounded-sm w-6 h-6 flex items-center justify-center pointer-events-none">
               <ChevronDown className="w-4 h-4 text-white opacity-80" />
             </span>
           </SelectTrigger>
@@ -221,7 +221,7 @@ export default function WalletHistory({ header }: WalletHistoryProps) {
               focus:ring-offset-0 [&>svg]:hidden"
           >
             <SelectValue placeholder="Past 24 hours" />
-            <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#384252] rounded-sm w-6 h-6 flex items-center justify-center pointer-events-none">
+            <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#0C2851] rounded-sm w-6 h-6 flex items-center justify-center pointer-events-none">
               <ChevronDown className="w-4 h-4 text-white opacity-80" />
             </span>
           </SelectTrigger>

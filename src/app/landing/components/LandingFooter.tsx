@@ -340,7 +340,7 @@ export default function LandingFooter() {
             {/* Originals */}
             <div className="flex flex-col gap-2.5">
               <h3 className="text-[10px] md:text-[12px] text-white font-medium mb-1">
-                Originals
+                Originalsfdfdh
               </h3>
 
               <div className="flex items-center justify-start text-[#9fa6b6] cursor-not-allowed">

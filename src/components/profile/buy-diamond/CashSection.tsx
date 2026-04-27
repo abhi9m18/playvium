@@ -90,7 +90,7 @@ function DiamondCard({ image, amount, price, free, onSelect }: CardProps) {
         <p className="mt-1 text-xs text-gray-400">Wulf Coin</p>
       </div>
 
-      <div className="mt-3 rounded-b-lg bg-[#384252] px-3 py-3 hover:bg-purple-500">
+      <div className="mt-3 rounded-b-lg bg-[#384252] px-3 py-3 hover:bg-[#187BF0]">
         <div className="flex items-center justify-between">
           <span className="text-sm text-white/80">Prize</span>
           <span className="flex items-end gap-1 font-bold text-white">

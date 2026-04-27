@@ -32,7 +32,7 @@ export default function Newreleases() {
             className="
               w-7 h-7 sm:w-8 sm:h-8
               flex items-center justify-center
-              rounded-md bg-[#2A2F3A]
+              rounded-md bg-[#0C2851]
               hover:bg-[#3a404d] transition
             "
           >
@@ -45,7 +45,7 @@ export default function Newreleases() {
             className="
               w-7 h-7 sm:w-8 sm:h-8
               flex items-center justify-center
-              rounded-md bg-[#2A2F3A]
+              rounded-md bg-[#0C2851]
               hover:bg-[#3a404d] transition
             "
           >
@@ -57,7 +57,7 @@ export default function Newreleases() {
             <button
               className="
                 h-8 sm:h-9 px-3 sm:px-4
-                rounded-md bg-[#2A2F3A]
+                rounded-md bg-[#0C2851]
                 hover:bg-[#3a404d]
                 text-white text-xs sm:text-sm
                 font-medium transition

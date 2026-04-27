@@ -75,22 +75,22 @@ export default function WalletRight({ header }: WalletRightProps) {
 
       <div className="flex flex-wrap gap-3">
         <Link href="/profile?tab=buy" className="flex-1 min-w-[140px]">
-          <button className="w-full h-12 rounded-lg bg-[#384252] hover:bg-[#B93DEB] text-sm font-semibold text-white hover:opacity-90 transition">
+          <button className="w-full h-12 rounded-lg bg-[#384252]  text-sm font-semibold text-white hover:opacity-90 transition">
             Buy Wulf Coin
           </button>
         </Link>
 
         <Link href="/profile?tab=redeem" className="flex-1 min-w-[120px]">
-          <button className="w-full h-12 rounded-lg bg-[#384252] hover:bg-[#B93DEB] text-sm font-semibold text-white hover:opacity-90 transition">
+          <button className="w-full h-12 rounded-lg bg-[#384252]  text-sm font-semibold text-white hover:opacity-90 transition">
             Redeem
           </button>
         </Link>
 
-        <button className="flex-1 min-w-[120px] h-12 rounded-lg bg-[#384252] hover:bg-[#B93DEB] text-sm font-semibold text-white  transition">
+        <button className="flex-1 min-w-[120px] h-12 rounded-lg bg-[#384252]  text-sm font-semibold text-white  transition">
           Daily Bonus
         </button>
 
-        <button className="flex-1 min-w-[120px] h-12 rounded-lg bg-[#384252] hover:bg-[#B93DEB] text-sm font-semibold text-white transition">
+        <button className="flex-1 min-w-[120px] h-12 rounded-lg bg-[#384252]  text-sm font-semibold text-white transition">
           Top Up
         </button>
       </div>

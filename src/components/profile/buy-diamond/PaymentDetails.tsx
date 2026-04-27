@@ -74,7 +74,7 @@ export default function PaymentDetails({
 
       <div className="my-10 text-center">
         <h2 className="text-xl font-bold text-white">Order Summary</h2>
-        <p className="mt-1 text-3xl font-bold text-[#D96BFF]">{price}</p>
+        <p className="mt-1 text-3xl font-bold text-[#187BF0]">{price}</p>
         <p className="mt-1 text-xs text-gray-400">
           {amount.toLocaleString()} Wulf Coin and bonus FREE {free}
         </p>
@@ -100,7 +100,7 @@ export default function PaymentDetails({
         <button
           onClick={handlePurchase}
           disabled={loading}
-          className="mx-auto flex h-9 w-85 items-center justify-center rounded-md bg-[#B93DEB] text-sm font-bold text-white disabled:opacity-60"
+          className="mx-auto flex h-9 w-85 items-center justify-center rounded-md bg-[#187BF0] text-sm font-bold text-white disabled:opacity-60"
         >
           {loading ? "Processing..." : "Proceed to payment"}
         </button>
