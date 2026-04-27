@@ -191,7 +191,7 @@ export default function VerifyOtpForm() {
               className={`w-12 h-12 bg-[#191D24] text-white text-center text-lg font-bold rounded-lg 
               ${hasError
                   ? "border border-red-500 focus:border-red-500"
-                  : "border border-[#242B35] focus:border-purple-500"
+                  : "border border-[#242B35] focus:border-[#187BF0]"
                 }`}
               disabled={resending || isSubmitting}
               onChange={(e) => handleChange(i, e.target.value)}
@@ -211,7 +211,7 @@ export default function VerifyOtpForm() {
       <Button
         type="submit"
         disabled={(otpValue || "").replace(/\D/g, "").length !== 6 || isSubmitting}
-        className="w-full bg-purple-500 hover:bg-purple-600 rounded-lg text-white text-xs font-bold py-3 disabled:opacity-50"
+        className="w-full bg-[#187BF0] hover:bg-[#1469D4] rounded-lg text-white text-xs font-bold py-3 disabled:opacity-50 transition"
       >
         {isSubmitting ? "Verifying..." : "Continue"}
       </Button>
@@ -221,14 +221,14 @@ export default function VerifyOtpForm() {
         {timer > 0 ? (
           <p>
             Resend OTP in{" "}
-            <span className="text-purple-500">{timer}s</span>
+            <span className="text-[#187BF0]">{timer}s</span>
           </p>
         ) : (
           <button
             type="button"
             onClick={handleResend}
             disabled={resending}
-            className="text-purple-500 font-bold disabled:opacity-50"
+            className="text-[#187BF0] font-bold disabled:opacity-50 hover:text-[#1469D4] transition"
           >
             {resending ? "Resending..." : "Resend OTP"}
           </button>
@@ -241,7 +241,7 @@ export default function VerifyOtpForm() {
         className="flex items-center justify-center w-full text-white text-sm font-bold -mt-2"
         onClick={() => setView("login")}
       >
-        <ChevronLeft size={18} className="text-purple-500" />
+        <ChevronLeft size={18} className="text-[#187BF0]" />
         Back to Login
       </button>
     </form>

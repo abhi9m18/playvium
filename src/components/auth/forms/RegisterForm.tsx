@@ -172,12 +172,11 @@ export default function RegisterForm() {
           <Checkbox
             checked={watch("agreeTerms")}
             onCheckedChange={(v) => setValue("agreeTerms", v === true)}
-            className="rounded-[3px] data-[state=checked]:bg-purple-700 data-[state=checked]:border-purple-700"
+            className="rounded-[3px] data-[state=checked]:bg-[#187BF0] data-[state=checked]:border-[#187BF0]"
             disabled={isLoading}
-          />
-          <span>
+          >
             I agree to the User Agreement & confirm I am at least 18 years old.
-          </span>
+          </Checkbox>
         </label>
 
         {errors.agreeTerms && (
@@ -188,7 +187,7 @@ export default function RegisterForm() {
           <Checkbox
             checked={watch("agreePromo")}
             onCheckedChange={(v) => setValue("agreePromo", v === true)}
-            className="rounded-[3px] data-[state=checked]:bg-purple-700 data-[state=checked]:border-purple-700"
+            className="rounded-[3px] data-[state=checked]:bg-[#187BF0] data-[state=checked]:border-[#187BF0]"
             disabled={isLoading}
           />
           <span>I agree to receive marketing promotions.</span>
@@ -199,7 +198,7 @@ export default function RegisterForm() {
       <Button
         type="submit"
         disabled={isLoading}
-        className="w-full bg-purple-500 hover:bg-purple-600 rounded-lg text-white text-xs font-bold py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-[#187BF0] hover:bg-[#1469D4] rounded-lg text-white text-xs font-bold py-3 disabled:opacity-50 disabled:cursor-not-allowed transition"
       >
         {isLoading ? (
           <div className="w-5 h-5 animate-spin rounded-full border-2 border-white border-t-transparent border-b-transparent" />
@@ -213,7 +212,7 @@ export default function RegisterForm() {
         Already have an account?
         <button
           type="button"
-          className="text-purple-500 hover:text-purple-400 transition-colors disabled:opacity-50"
+          className="text-[#187BF0] hover:text-[#1469D4] transition-colors disabled:opacity-50"
           onClick={() => setView("login")}
           disabled={isLoading}
         >

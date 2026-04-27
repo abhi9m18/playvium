@@ -105,7 +105,7 @@ export default function LoginForm() {
       <Button
         type="submit"
         disabled={isLoading}
-        className="w-full bg-purple-500 hover:bg-purple-600 rounded-lg text-white text-sm font-bold py-3 flex items-center justify-center"
+        className="w-full bg-[#187BF0] hover:bg-[#1469D4] rounded-lg text-white text-sm font-bold py-3 flex items-center justify-center transition"
       >
         {isLoading ? (
           <div className="w-5 h-5 animate-spin rounded-full border-2 border-white border-t-transparent border-b-transparent" />
@@ -118,7 +118,7 @@ export default function LoginForm() {
         New to Wulf Casino?
         <button
           type="button"
-          className="text-purple-500 font-bold"
+          className="text-[#187BF0] font-bold hover:text-[#1469D4] transition"
           onClick={() => setView("register")}
         >
           Create account

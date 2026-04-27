@@ -78,7 +78,7 @@ export default function ForgotForm() {
       <Button
         type="submit"
         disabled={loading}
-        className="w-full bg-purple-500 hover:bg-purple-600 rounded-lg text-white text-xs font-bold py-3"
+        className="w-full bg-[#187BF0] hover:bg-[#1469D4] rounded-lg text-white text-xs font-bold py-3 transition"
       >
         {loading ? (
           <div className="w-5 h-5 animate-spin rounded-full border-2 border-white border-t-transparent border-b-transparent" />
@@ -91,7 +91,7 @@ export default function ForgotForm() {
         className="flex items-center justify-center gap-2 w-full text-white text-sm font-bold"
         onClick={() => setView("login")}
       >
-        <ChevronLeft size={18} className="text-purple-500" />
+        <ChevronLeft size={18} className="text-[#187BF0]" />
         Back to Login
       </button>
     </form>
