@@ -159,7 +159,7 @@ export default function Header({
     activeCurrency === "cash" ? wulfCash.toFixed(2) : wulfCoin.toLocaleString();
 
   return (
-    <div className="fixed w-full z-999 bg-[#0F131A]">
+    <div className="fixed w-full z-999 bg-[#051034]">
       {/* Desktop & Tablet Header */}
       {profileOpen && <ProfileModal onClose={() => setProfile(false)} />}
       <div className="hidden md:flex items-center justify-between w-full h-[66px] px-3">
@@ -169,7 +169,7 @@ export default function Header({
             variant="ghost"
             size="icon"
             onClick={onToggleSidebar}
-            className={`bg-black hover:bg-black rounded-md w-11 h-11`}
+            className={`bg-[#092D61] hover:bg-black rounded-md w-11 h-11`}
           >
             <Image      
               src={hamburgur}
@@ -205,7 +205,7 @@ export default function Header({
             <div className="flex items-center gap-2">
               <button
                 onClick={open}
-                className={`w-10 h-10 rounded-lg bg-black flex items-center justify-center hover:bg-black/80 transition`}
+                className={`w-10 h-10 rounded-lg bg-[#092D61] flex items-center justify-center hover:bg-black/80 transition`}
               >
                 <Image src={search2} alt="Search" width={20} height={20} />
               </button>
@@ -218,10 +218,10 @@ export default function Header({
               </Link>
 
               <div className="relative">
-                <div className="flex items-center bg-[#000000] border-[#170919] pr-1 rounded-[10px] h-11 min-w-[200px] border  overflow-hidden">
+                <div className="flex items-center bg-[#092D61] border-[#170919] pr-1 rounded-[10px] h-11 min-w-[200px] border  overflow-hidden">
                   <div
                     onClick={toggleCurrency}
-                    className="relative w-20 h-9 ml-0.5 rounded-[7px]  bg-[#242B35] overflow-hidden"
+                    className="relative w-20 h-9 ml-0.5 rounded-[7px]  bg-[#021227] overflow-hidden"
                   >
                     <Image
                       src={twonotes}
@@ -230,8 +230,8 @@ export default function Header({
                       height={40}
                       className={`absolute left-1 top-1/2 -translate-y-1/2 transition-all duration-300 ${
                         activeCurrency === "coins"
-                          ? "opacity-100 scale-110 brightness-110"
-                          : "opacity-60 scale-110 brightness-90"
+                          ? "opacity-100 "
+                          : "opacity-60 "
                       }`}
                     />
                     <Image
@@ -241,8 +241,8 @@ export default function Header({
                       height={38}
                       className={`absolute right-1 top-1/2 -translate-y-1/2 transition-all duration-300 ${
                         activeCurrency === "cash"
-                          ? "opacity-100 scale-110 brightness-110"
-                          : "opacity-60 scale-100 brightness-90"
+                          ? "opacity-100"
+                          : "opacity-60 "
                       }`}
                     />
                   </div>
@@ -298,7 +298,7 @@ export default function Header({
                     </div>
                   </Link>
                   <Link href="/profile?tab=buy">
-                    <button className="hidden md:flex h-9 px-5 rounded-[7px] justify-center items-center text-center bg-[#B93DEB] text-white font-bold text-[15px] hover:bg-[#a32dd6] transition-all">
+                    <button className="hidden md:flex h-9 px-5 rounded-[7px] justify-center items-center text-center bg-[#187BF0] text-white font-bold text-[15px] hover:bg-[#a32dd6] transition-all">
                       Buy
                     </button>
                   </Link>
@@ -308,12 +308,12 @@ export default function Header({
               <Link href={"/rewards"}>
                 <button
                   onClick={() => setIsRedeemOpen(true)}
-                  className={`w-10 h-10 rounded-lg bg-black flex items-center justify-center hover:bg-black/80 transition`}
+                  className={`w-10 h-10 rounded-lg bg-[#092D61] flex items-center justify-center hover:bg-black/80 transition`}
                 >
                   <Image src={gift} alt="Gift" width={20} height={20} />
                 </button>
               </Link>
-              <div className="flex items-center bg-black rounded-lg overflow-hidden">
+              <div className="flex items-center bg-[#092D61] rounded-lg overflow-hidden">
                 {/* Chat */}
                 <button
                   onClick={() => openChatModal("chat")}

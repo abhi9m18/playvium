@@ -3,7 +3,7 @@ import { clock } from "@/assets/images/recent";
 
 export default function RecentsBanner() {
   return (
-    <div className="relative w-full h-40 sm:h-40 md:h-48 bg-[#181D25] rounded-xl sm:rounded-2xl flex items-center ">
+    <div className="relative w-full h-40 m-4 sm:h-40 md:h-48 bg-[#181D25] rounded-xl sm:rounded-2xl flex items-center ">
       <h1 className="absolute bottom-5 left-5 md:left-10 text-white font-semibold text-xl sm:text-xl md:text-2xl z-10">
         Recent
       </h1>
