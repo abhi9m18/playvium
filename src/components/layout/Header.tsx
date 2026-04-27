@@ -298,7 +298,7 @@ export default function Header({
                     </div>
                   </Link>
                   <Link href="/profile?tab=buy">
-                    <button className="hidden md:flex h-9 px-5 rounded-[7px] justify-center items-center text-center bg-[#187BF0] text-white font-bold text-[15px] hover:bg-[#a32dd6] transition-all">
+                    <button className="hidden md:flex h-9 px-5 rounded-[7px] justify-center items-center text-center bg-[#187BF0] text-white font-bold text-[15px]  transition-all">
                       Buy
                     </button>
                   </Link>

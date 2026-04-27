@@ -142,7 +142,7 @@ export default function Footer(props: FooterProps) {
                   height={100}
                   width={100}
                   src={logo}
-                  alt="Wulf Casino Logo"
+                  alt="Playvium Logo"
                   className="w-32 sm:w-36 md:w-40 lg:w-44 h-auto"
                 />
               </Link>
@@ -357,10 +357,10 @@ export default function Footer(props: FooterProps) {
 
           {/* Desktop Footer Links Grid */}
           <div className="hidden md:grid md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-10 w-full pb-8 lg:pb-10 mb-8 lg:mb-0 border-b md:border-0 border-[#2a2e38]">
-            {/* Wulf Casino */}
+            {/* Playvium */}
             <div className="flex flex-col gap-2.5">
               <h3 className="text-[15px] md:text-[16px] text-white font-medium mb-1">
-                Wulf Casino
+                Playvium
               </h3>
               <Link
                 href="#"
@@ -539,7 +539,7 @@ export default function Footer(props: FooterProps) {
                 className="flex justify-between items-center cursor-pointer py-4"
               >
                 <span className="text-white text-[15px] sm:text-[16px] font-medium">
-                  Wulfcasino
+                  Playvium
                 </span>
                 <svg
                   className="w-5 h-5 text-[#9fa6b6] peer-checked:rotate-180 transition-transform"
@@ -771,14 +771,14 @@ export default function Footer(props: FooterProps) {
               <p className="text-[12px] text-[#9fa6b6] leading-5 mb-6 border-0 border-[#384252] ">
                 A multi-award winning Wulfcasino. With a player-centric
                 approach, Win Win is able to satisfy millions of gamblers across
-                the globe. Wulf Casino has its priority set on its community,
+                the globe. Playvium has its priority set on its community,
                 ensuring an everlasting and endlessly entertaining gambling
                 experience.
               </p>
 
               {/* Terms Notice */}
               <p className="text-[12px] text-[#9fa6b6] leading-5 mb-6">
-                Your use of and access to Wulf Casino signifies that you fully
+                Your use of and access to Playvium signifies that you fully
                 understand and agree to be legally bound by the contents of our
                 Terms of Service and Responsible Gaming Policy.
               </p>
@@ -801,7 +801,7 @@ export default function Footer(props: FooterProps) {
               {/* Ownership Information */}
               <p className="text-[12px] text-[#9fa6b6] leading-5 mb-6">
                 As of 30th April 2024, Small House B.V has taken over the
-                operations of the Wulf Casino website brand previously owned by
+                operations of the Playvium website brand previously owned by
                 Blockdance B.V. All relationships entered into with players
                 until 30 April 2024 remain with Blockdance B.V. All new
                 relationships with players as from 30 April 2024 are formed with
@@ -834,7 +834,7 @@ export default function Footer(props: FooterProps) {
 
               {/* Copyright */}
               <p className="text-[11px] sm:text-[12px] md:text-[14px] pb-20 md:pb-0 text-[#adb5c9] text-center pt-6 border-t md:border-0 border-[#2a2e38]">
-                Copyright ©{new Date().getFullYear()} Wulf Casino. ALL RIGHTS
+                Copyright ©{new Date().getFullYear()} Playvium. ALL RIGHTS
                 RESERVED.
               </p>
             </div>
