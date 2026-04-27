@@ -23,6 +23,10 @@ import blurhomebanner6 from "./blurhomebanner6.png";
 import blurhomebanner7 from "./blurhomebanner7.png";
 import blurhomebanner8 from "./blurhomebanner8.png";
 
+
+
+
+import homebannerone from "./homesliderone.svg";
 import herocasino from "./herocasino.svg";
 import herosports from "./herosports.svg";
 import herosportsmobile from "./herosportsmobile.svg";
@@ -56,6 +60,10 @@ export {
   blurhomebanner6,
   blurhomebanner7,
   blurhomebanner8,
+
+
+
+  homebannerone,
   search,
   search2,
   herosports,

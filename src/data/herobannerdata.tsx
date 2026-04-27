@@ -2,6 +2,7 @@ import {
   blurhomebanner,
   blurhomebanner2,
   blurhomebanner3,
+  homebannerone,
 } from "@/assets/images/home";
 
 /**
@@ -22,7 +23,7 @@ export const banners = [
     amount: "20,000.00",
     amountSuffix: "in Casino",
     buttonText: "Claim Now",
-    backgroundImage: blurhomebanner,
+    backgroundImage: homebannerone,
 
     link: "/register",
 
