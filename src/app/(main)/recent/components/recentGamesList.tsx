@@ -25,15 +25,13 @@ export default function RecentGamesList() {
   return (
     <div className="w-full flex flex-col gap-4 p-4">
       {/* ------------------------- SEARCH BAR ------------------------- */}
-      <div className="w-full relative">
+     <div className="relative mb-4 sm:mb-5">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 w-5 h-5" />
         <input
-          type="text"
-          placeholder="Search Games"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full bg-[#14171D] text-white px-12 py-2.5 rounded-xl border border-[#20242C]
-                     focus:ring-2 focus:ring-[#B93DEB] outline-none transition placeholder:text-white/40"
+          placeholder="Search Games"
+          className="w-full bg-[#06162D] text-white px-12 py-2.5 rounded-xl border border-[#20242C]  outline-none transition placeholder:text-white/40"
         />
       </div>
 

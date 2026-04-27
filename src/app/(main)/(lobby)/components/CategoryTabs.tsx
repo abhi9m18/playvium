@@ -31,8 +31,8 @@ export default function CategoryTabs() {
               transition
               ${
                 active === "lobby"
-                  ? "text-white bg-[#187BF0] border-[#187BF0] shadow-[0_0_12px_rgba(24,123,240,0.7)]"
-                  : "text-white/70 hover:text-white hover:bg-[#187BF0]/20 hover:border-[#187BF0]/40"
+                  ? "text-white "
+                  : "text-white/70 hover:text-white"
               }
             `}
           >
