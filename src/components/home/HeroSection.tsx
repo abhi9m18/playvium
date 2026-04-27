@@ -169,7 +169,7 @@ export default function HeroSection() {
           </div>
 
           {/* Pagination Dots */}
-          <div className="absolute bottom-6 md:bottom-2 left-15 md:left-40 -translate-x-1/2 flex gap-1 z-20">
+          <div className="absolute bottom-6 md:bottom-8 left-10 md:left-25 -translate-x-1/2 flex gap-1 z-20">
             {banners.map((_, index) => (
               <button
                 key={index}

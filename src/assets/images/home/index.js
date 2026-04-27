@@ -3,6 +3,10 @@ import cross from "./cross.svg";
 import search from "./search.svg";
 import search2 from "./search2.svg";
 import dino from "./dino.svg";
+
+
+
+import mennew from "./mennew.svg";
 import message from "./message.svg";
 import gift from "./gift.svg";
 import notification from "./notification.svg";
@@ -57,7 +61,7 @@ import fishingherobanner from "./fishingherobanner.svg";
 
 export {
   slot,bannerone,bannertwo,bannerthree,
-  slotimg,pokerimg,livedealer,fishingimg,casinonebanner,slotnew,pokernew,livedealernew,fishingnew,sportbooknew,
+  slotimg,pokerimg,livedealer,fishingimg,casinonebanner,slotnew,pokernew,livedealernew,fishingnew,sportbooknew,mennew,
   fishingherobanner,
   liveherobanner,
   pokerherobanner,
