@@ -92,7 +92,7 @@ export default function HeroSection() {
   return (
     <div className="w-full md:px-0">
       {/* Main Hero Banner */}
-      <div className="relative w-full h-60 sm:h-[420px] md:h-[300px] lg:h-80 overflow-hidden bg-[#191d24]">
+      <div className="relative w-full h-60 sm:h-[420px] md:h-[300px] lg:h-80 overflow-hidden ">
         {/* Purple Gradient Overlay */}
 
 
@@ -183,7 +183,7 @@ export default function HeroSection() {
           </div>
 
           {/* Pagination Dots */}
-          <div className="absolute bottom-6 md:bottom-2 left-15 md:left-40 -translate-x-1/2 flex gap-1 z-20">
+          <div className="absolute bottom-6 md:bottom-6 left-12 md:left-25 -translate-x-1/2 flex gap-1 z-20">
             {banners.map((_, index) => (
               <button
                 key={index}
@@ -206,7 +206,7 @@ export default function HeroSection() {
           href="/livedealers"
           className="group relative block rounded-2xl md:rounded-3xl overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
         >
-          <div className="relative w-full h-[120px] md:h-auto aspect-[2.2/1] md:aspect-[2.2/1]">
+          <div className="relative w-full h-[120px] mt-5.5 md:h-auto aspect-[2.2/1] md:aspect-[2.2/1]">
             <Image
               src={casinobanner}
               alt="Casino"

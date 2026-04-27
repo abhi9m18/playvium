@@ -14,11 +14,12 @@ export default function HeroSection() {
   return (
     <section
       className="
-        mt-14 md:mt-15
+        mt-14 md:mt-15 md:ml-4
+
         lg:pl-8
         sm:py-6 md:py-6 lg:py-8
         bg-[#2C3034]
-        md:bg-[#10141a]
+        md:bg-[#06162D]
         rounded-2xl
       "
     >
@@ -78,11 +79,10 @@ export default function HeroSection() {
       lg:font-medium
       w-fit
       rounded-md md:rounded-lg
-      bg-transparent
       text-white
-      border-2 border-[#384252]
+      bg-[#187BF0]!
       
-      hover:border-[#B93DEB]
+     
       transition-all
       duration-300
       ease-in-out
@@ -101,7 +101,7 @@ export default function HeroSection() {
       justify-center
       rounded-sm
       md:rounded-lg
-      bg-[#b34ae9]
+     bg-[#187BF0]
       px-8
       md:px-22
       py-1.5

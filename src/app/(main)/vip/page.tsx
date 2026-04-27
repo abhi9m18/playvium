@@ -32,7 +32,7 @@ function PublicVip() {
 }
 function PrivateVip() {
   return (
-    <div className="w-full mx-auto md:px-4 py-12 space-y-12">
+    <div className="w-full mx-auto md:px-4 py-12 space-y-12 ">
       {/* Top Card */}
       <VIPCardTop />
 

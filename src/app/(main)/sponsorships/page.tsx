@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Sponsorships = () => {
   return (
-    <div className="bg-[#15181E]">
+    <div className="bg-[#06162D]">
       <div className="mx-auto w-full max-w-7xl px-4 md:px-2 py-2">
         {/* ================= HEADER SECTION ================= */}
         <div className="mt-[66px] relative overflow-hidden rounded-xl md:rounded-none">
@@ -59,7 +59,7 @@ const Sponsorships = () => {
         </div>
 
         {/* ================= CONTENT SECTION ================= */}
-        <div className="bg-[#191D24] rounded-xl mt-6">
+        <div className="bg-[#06162D] rounded-xl mt-6">
           {/* -------- Section 1 -------- */}
           <div className="w-full p-6 md:p-12 flex flex-col gap-12">
             <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">

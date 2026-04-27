@@ -54,7 +54,7 @@ const Announcement = () => {
   ];
 
   return (
-    <div className="w-full bg-[#0F131A]">
+    <div className="w-full bg-[#060B1E]">
       <div className="mt-[60px] md:mt-[66px] px-1 md:px-3 py-2">
         <div className=" max-w-7xl justify-center mx-auto items-center md:p-6 px-4 md:px-10 py-6">
           <div className="w-full">
