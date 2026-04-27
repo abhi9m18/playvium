@@ -32,7 +32,7 @@ export default function SlotsPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="w-full bg-[#14171D] text-white px-12 py-3 rounded-xl border border-[#20242C] 
-                focus:ring-2 focus:ring-[#B93DEB] outline-none transition placeholder:text-white/40"
+                focus:ring-2 focus:ring-[#187BF0] outline-none transition placeholder:text-white/40"
             />
           </div>
           <div className="mt-1">

@@ -31,17 +31,17 @@ export default function CategoryTabs() {
               transition
               ${
                 active === "lobby"
-                  ? "text-white shadow-[0_0_10px_rgba(185,61,235,0.6)]"
-                  : "text-white/70 hover:text-white"
+                  ? "text-white bg-[#187BF0] border-[#187BF0] shadow-[0_0_12px_rgba(24,123,240,0.7)]"
+                  : "text-white/70 hover:text-white hover:bg-[#187BF0]/20 hover:border-[#187BF0]/40"
               }
             `}
           >
             <Image
-              src={active === "lobby" ? LobbyIconActive : LobbyIcon}
+              src={LobbyIcon}
               width={14}
               height={14}
               alt="Lobby"
-              className="transition group-hover:brightness-125"
+              className={`transition ${active === "lobby" ? "brightness-0 invert" : "group-hover:brightness-125"}`}
             />
 
             <span className="leading-none">Lobby</span>
@@ -63,17 +63,17 @@ export default function CategoryTabs() {
               transition
               ${
                 active === cat.id
-                  ? "text-white  shadow-[0_0_10px_rgba(185,61,235,0.6)]"
-                  : "text-white/70 hover:text-white"
+                  ? "text-white bg-[#187BF0] border-[#187BF0] shadow-[0_0_12px_rgba(24,123,240,0.7)]"
+                  : "text-white/70 hover:text-white hover:bg-[#187BF0]/20 hover:border-[#187BF0]/40"
               }
             `}
           >
             <Image
-              src={active === cat.id ? cat.activeIcon : cat.icon}
+              src={cat.icon}
               width={16}
               height={16}
               alt={cat.name}
-              className={`transition group-hover:brightness-125`}
+              className={`transition ${active === cat.id ? "brightness-0 invert" : "group-hover:brightness-125"}`}
             />
 
             <span className="leading-none">{cat.name}</span>
