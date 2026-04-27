@@ -131,7 +131,7 @@ function SubscriptionTable({
               className={`w-full py-4 text-xl font-bold font-[Inter] ${
                 tier.id === 1
                   ? "bg-[#232931]"
-                  : "bg-[#B146F5] hover:bg-[#C05CFF]"
+                  : "bg-[#187BF0] hover:bg-[#187BF0]/90"
               }`}
             >
               {tier.buttonText}

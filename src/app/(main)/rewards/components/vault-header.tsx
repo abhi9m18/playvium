@@ -57,7 +57,7 @@ export function VaultHeader() {
         
             <div className="relative mt-12 md:mt-18 mb-4 hidden md:block">
               <div className="h-4 md:h-8 bg-[#2a3441] rounded-full relative border-4 md:border-8 border-[#8292AA]">
-                <div className="absolute left-0 top-0 h-full w-[10%] bg-linear-to-r from-green-500 to-green-400 rounded-full" />
+                <div className="absolute left-0 top-0 h-full w-[10%] bg-[#187BF0] rounded-full" />
               </div>
 
               <div

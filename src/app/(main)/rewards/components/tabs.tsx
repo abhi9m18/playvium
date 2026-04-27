@@ -12,7 +12,7 @@ export default function Tabs() {
         
         {/* Animated Indicator */}
         <motion.div
-          className="absolute top-1 bottom-1 rounded-full bg-[#B93DEB]"
+          className="absolute top-1 bottom-1 rounded-full bg-[#187BF0]"
           layout
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
           initial={false}

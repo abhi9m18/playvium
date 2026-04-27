@@ -44,7 +44,7 @@ export function CurrentRankCard({ rank, progress, wagerRemaining, onClaim }: Cur
             <p className="text-[16px] font-bold text-white mb-1">Wager for next Rank</p>
 
             <div className="w-full bg-[#3E4652] rounded-full my-3 h-2 mb-2">
-              <div className="bg-[#B93DEB] h-2 rounded-full" style={{ width: `${progress}%` }} />
+              <div className="bg-[#187BF0] h-2 rounded-full" style={{ width: `${progress}%` }} />
             </div>
             <p className="text-[15px] text-gray-100 mb-2">Remaining {wagerRemaining}</p>
           </div>
