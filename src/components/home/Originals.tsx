@@ -39,20 +39,20 @@ export default function Originals() {
         <div className="flex items-center gap-1 sm:gap-2">
           <button
             onClick={handleLeft}
-            className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-md bg-[#2A2F3A] hover:bg-[#3a404d] transition"
+            className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-md bg-[#092D61] hover:bg-[#3a404d] transition"
           >
             <span className="text-white text-sm">{`<`}</span>
           </button>
 
           <button
             onClick={handleRight}
-            className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-md bg-[#2A2F3A] hover:bg-[#3a404d] transition"
+            className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-md bg-[#092D61] hover:bg-[#3a404d] transition"
           >
             <span className="text-white text-sm">{`>`}</span>
           </button>
 
           <Link href="/lobby">
-            <button className="h-8 sm:h-9 px-3 sm:px-4 rounded-md bg-[#2A2F3A] hover:bg-[#3a404d] text-white text-xs sm:text-sm font-medium transition">
+            <button className="h-8 sm:h-9 px-3 sm:px-4 rounded-md bg-[#092D61] hover:bg-[#3a404d] text-white text-xs sm:text-sm font-medium transition">
               View All
             </button>
           </Link>

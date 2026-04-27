@@ -63,7 +63,7 @@ export default function RecentBigWins() {
               onClick={() => setActiveFilter(filter)}
               className={`px-2 md:px-3 py-1 rounded-lg text-[9px] sm:text-sm font-normal whitespace-nowrap transition-all ${
                 activeFilter === filter
-                  ? "bg-[#A625DA] border border-[#CA6BEF] text-white"
+                  ? "bg-[#092D61] border border-[#092D61] text-white"
                   : "text-gray-400 hover:text-white"
               }`}
             >

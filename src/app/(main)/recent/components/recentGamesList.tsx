@@ -23,7 +23,7 @@ export default function RecentGamesList() {
   };
 
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-4 p-4">
       {/* ------------------------- SEARCH BAR ------------------------- */}
       <div className="w-full relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 w-5 h-5" />
@@ -51,7 +51,7 @@ export default function RecentGamesList() {
           {/* Left Arrow */}
           <button
             onClick={scrollLeft}
-            className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-md bg-[#2A2F3A]
+            className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-md bg-[#092D61]
                        hover:bg-[#3A404D] transition"
           >
             <span className="text-white text-base sm:text-lg font-bold">{`<`}</span>
@@ -60,7 +60,7 @@ export default function RecentGamesList() {
           {/* Right Arrow */}
           <button
             onClick={scrollRight}
-            className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-md bg-[#2A2F3A]
+            className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-md bg-[#092D61]
                        hover:bg-[#3A404D] transition"
           >
             <span className="text-white text-base sm:text-lg font-bold">{`>`}</span>
@@ -69,7 +69,7 @@ export default function RecentGamesList() {
           {/* View All */}
           <Link href="/recent">
             <button
-              className="h-8 sm:h-9 px-3 sm:px-4 rounded-md bg-[#2A2F3A] hover:bg-[#3A404D]
+              className="h-8 sm:h-9 px-3 sm:px-4 rounded-md bg-[#092D61] hover:bg-[#3A404D]
                                text-white text-xs sm:text-sm font-medium transition whitespace-nowrap"
             >
               View All
