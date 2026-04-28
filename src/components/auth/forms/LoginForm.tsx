@@ -115,7 +115,7 @@ export default function LoginForm() {
       </Button>
 
       <p className="flex justify-start text-white text-sm gap-2">
-        New to Wulf Casino?
+        New to Playvium?
         <button
           type="button"
           className="text-[#187BF0] font-bold hover:text-[#1469D4] transition"
